@@ -9,7 +9,7 @@
 * Polynomials are used to represent binary bits. This makes visualizing the operations easier.<br>
 	Eg:	**1101** will be **1**x<sup>3</sup>+**1**x<sup>2</sup>+**0**x<sup>1</sup>+**1**x<sup>0</sup> = x<sup>3</sup>+x<sup>2</sup>+1<br><br>
 	Addition/subtraction are XOR operations. For example x<sup>5</sup>+x<sup>4</sup>+x and x<sup>6</sup>+x<sup>4</sup>+x gives x<sup>6</sup>+x<sup>5</sup>.<br>
-	Multiplcation and division are the same, but with XOR operations instead.<br>
+	Multiplcation and division are the same, but with XOR operations instead.<br><br>
 	<img src="https://github.com/G7495x/CSE-VTU-Labs-2010-Syllabus/blob/master/Networks-Lab-10CSL77/Images/7_1.png?raw=true" width="480px">
 * CRC algorithm is **exactly** the same as division except that instead of subtraction, **XOR** operation is carried out.<br><br>
 	<img src="https://github.com/G7495x/CSE-VTU-Labs-2010-Syllabus/blob/master/Networks-Lab-10CSL77/Images/7_2.png?raw=true" width="480px">

@@ -8,7 +8,7 @@
 * CRC can only tolerate a certain number of **bit-parity errors**, beyond which errors go undetected.
 * Polynomials are used to represent binary bits. This makes visualizing the operations easier.<br>
 	Eg:	**1101** will be **1**x<sup>3</sup>+**1**x<sup>2</sup>+**0**x<sup>1</sup>+**1**x<sup>0</sup> = x<sup>3</sup>+x<sup>2</sup>+1
-* CRC algorithm is **exactly** the same as division except that instead of subtraction, XOR operation is carried out.<br><br>
+* CRC algorithm is **exactly** the same as division except that instead of subtraction, **XOR** operation is carried out.<br><br>
 	<img src="https://github.com/G7495x/CSE-VTU-Labs-2010-Syllabus/blob/master/Networks-Lab-10CSL77/Images/7_1.png?raw=true" width="480px">
 * The **data** bits are the dividend.
 * A **pre-defined divisor** is used. The divisor is **common** between transmitter and receiver.

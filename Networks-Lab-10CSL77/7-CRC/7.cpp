@@ -47,7 +47,7 @@ int main(){
     uint data_CRC;                              //Data bits appended with CRC bits (16+16 bits)
     const uint polynomial=0b10001000000100001;  //Divisor polynomial (CCITT standard x^16 + x^12 + x^5 + x^0)
 
-    cout<<"Polynomial:\n";
+    cout<<"Divisor polynomial:\n";
     cout<<bitset<17>(polynomial)<<"\n\n";
 
     //Sending Phase

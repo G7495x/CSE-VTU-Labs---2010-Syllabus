@@ -19,7 +19,7 @@
 ```bash
 $ gcc 7.c -O2
 $ ./a.out
-Polynomial:
+Divisor:
 10001000000100001
 
 Enter data bits:
@@ -33,7 +33,7 @@ Enter recieved sequence:
 CRC match!
 
 $ ./a.out
-Polynomial:
+Divisor:
 10001000000100001
 
 Enter data bits:

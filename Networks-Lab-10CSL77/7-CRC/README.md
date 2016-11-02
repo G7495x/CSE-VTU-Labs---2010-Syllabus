@@ -12,7 +12,7 @@
 * The **data** bits are the dividend.
 * A **pre-defined divisor** is used.
 * The divisor is **common** between transmitter and receiver.
-* The **reminder** is the CRC bits and **quotient** is discarded.
+* **REMINDER** is the CRC bits and **quotient** is discarded.
 
 ### Code Output
 

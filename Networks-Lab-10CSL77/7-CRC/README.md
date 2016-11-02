@@ -14,8 +14,9 @@
 	<br><br><img src="../Images/7-1.png?raw=true" width="480px">
 	<br><br><img src="../Images/7-2.png?raw=true" width="480px">
 * The **data** bits are the dividend.
-* A **pre-defined divisor** is used. The divisor is **common** between transmitter and receiver.
 * **REMAINDER** is the CRC bits and **quotient** is discarded.
+* CRC is computed by sender. It is **appended** to the data bits and sent. The reciever just performs a division operation on the whole bits. If last 16 bits (for 16-bit CRC) are zeros, then no errors were detected.
+* A **pre-defined divisor** is used. The divisor is **common** between sender and receiver.
 * For 16-bit CRC, the divisor must be 17 bits long with leftmost bit = 1.
 * **CRC-CCITT** (16-bit) standard divisor - 0b10001000000100001.
 * The divisor is normally called the **generator polynomial** or simply the **generator**.

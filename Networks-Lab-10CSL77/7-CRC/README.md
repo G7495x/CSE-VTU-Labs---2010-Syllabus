@@ -10,9 +10,9 @@
 	Eg:	**1101** will be **1**x<sup>3</sup>+**1**x<sup>2</sup>+**0**x<sup>1</sup>+**1**x<sup>0</sup> = x<sup>3</sup>+x<sup>2</sup>+1<br><br>
 	Addition/subtraction are **XOR** operations. For example x<sup>5</sup>+x<sup>4</sup>+x and x<sup>6</sup>+x<sup>4</sup>+x gives x<sup>6</sup>+x<sup>5</sup>.<br>
 	Multiplcation and division are the same, but with XOR operations instead.
-* CRC algorithm is **exactly** the same as division except that instead of subtraction, **XOR** operation is carried out.<br><br>
-	<img src="../Images/7-1.png?raw=true" width="480px"><br><br>
-	<img src="https://github.com/G7495x/CSE-VTU-Labs-2010-Syllabus/blob/master/Networks-Lab-10CSL77/Images/7-2.png?raw=true" width="480px">
+* CRC algorithm is **exactly** the same as division except that instead of subtraction, **XOR** operation is carried out.
+	<br><br><img src="../Images/7-1.png?raw=true" width="480px">
+	<br><br><img src="../Images/7-2.png?raw=true" width="480px">
 * The **data** bits are the dividend.
 * A **pre-defined divisor** is used. The divisor is **common** between transmitter and receiver.
 * **REMAINDER** is the CRC bits and **quotient** is discarded.

@@ -2,7 +2,7 @@
 
 ### Intro
 
-* CRC (short for Cyclic Redundancy Check) is an error detection algorithm (**NOT** an error correction algorithm!).
+* Cyclic Redundancy Check or CRC, is an error detection algorithm (**NOT** an error correction algorithm!).
 * Given binary data bits, CRC algotithm produces a CRC bit-sequence of specified length (For 16 bit CRC, it's 16 bits).
 * Higher the length of the CRC, the better it is at identifying errors, but checking takes longer.
 * CRC can only tolerate a certain number of bit parity errors, beyond which errors go undetected.

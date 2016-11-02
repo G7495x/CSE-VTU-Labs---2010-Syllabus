@@ -17,7 +17,7 @@
 * A **pre-defined divisor** is used. The divisor is **common** between transmitter and receiver.
 * **REMAINDER** is the CRC bits and **quotient** is discarded.
 * For 16-bit CRC, the divisor must be 17 bits long with leftmost bit = 1.
-* CRC-CCITT (16-bit) standard divisor - 0b10001000000100001.
+* **CRC-CCITT** (16-bit) standard divisor - 0b10001000000100001.
 
 ### Code Output
 

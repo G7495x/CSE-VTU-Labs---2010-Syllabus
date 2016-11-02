@@ -13,7 +13,7 @@
 * The **data** bits are the dividend.
 * A **pre-defined divisor** is used. The divisor is **common** between transmitter and receiver.
 * **REMAINDER** is the CRC bits and **quotient** is discarded.
-* For 16-bit CRC, the divisor must be 17 bits long with MSB = 1.
+* For 16-bit CRC, the divisor must be 17 bits long with leftmost bit = 1.
 
 ### Code Output
 

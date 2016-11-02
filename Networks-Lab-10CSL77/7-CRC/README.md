@@ -17,7 +17,7 @@
 ### Code Output
 
 ```bash
-$ gcc 7.c -O2
+$ g++ 7.cpp -O2
 $ ./a.out
 Divisor:
 10001000000100001

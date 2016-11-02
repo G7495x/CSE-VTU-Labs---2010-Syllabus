@@ -22,7 +22,6 @@
 * **CRC-CCITT** (16-bit) standard divisor - 0b10001000000100001.
 
 ### Code (C++)
-
 ```c++
 #include <iostream>
 #include <cstdlib>
@@ -101,7 +100,6 @@ int main(){
 ```
 
 ### Code Output
-
 ```bash
 $ g++ 7.cpp -O2
 $ ./a.out

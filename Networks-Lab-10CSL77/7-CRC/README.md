@@ -2,18 +2,17 @@
 
 ### Intro
 
-* CRC (short for Cyclic Redundancy Check) is an error detection algorithm (**NOT** an error correction algorithm!).
-* Given binary data bits, CRC algotithm produces a CRC bit-sequence of specified length (For 16 bit CRC, it's 16 bits).
+* Cyclic Redundancy Check or **CRC**, is an error detection algorithm (**NOT** an error correction algorithm!).
+* Given binary data bits, CRC algotithm produces a CRC bit-sequence of specified length (For 16-bit CRC, it's 16 bits).
 * Higher the length of the CRC, the better it is at identifying errors, but checking takes longer.
-* CRC can only tolerate a certain number of bit parity errors, beyond which errors go undetected.
-
-### Algorithm
-
-* CRC algorithm is the same as division except that instead of subtraction, XOR operation is carried out.
-* The data bits are the dividend.
-* A pre-defined divisor is used.
-* The reminder is the CRC bits and quotient is discarded.
-* The divisor is common between transmitter and receiver.
+* CRC can only tolerate a certain number of **bit-parity errors**, beyond which errors go undetected.
+* Polynomials are used to represent binary bits. This makes visualizing the operations easier.<br>
+	Eg:	**1101** will be **1**x<sup>3</sup>+**1**x<sup>2</sup>+**0**x<sup>1</sup>+**1**x<sup>0</sup> = x<sup>3</sup>+x<sup>2</sup>+1
+* CRC algorithm is **exactly** the same as division except that instead of subtraction, XOR operation is carried out.
+* The **data** bits are the dividend.
+* A **pre-defined divisor** is used.
+* The divisor is **common** between transmitter and receiver.
+* The **reminder** is the CRC bits and **quotient** is discarded.
 
 ### Code Output
 

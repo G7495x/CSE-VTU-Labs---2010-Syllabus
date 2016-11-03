@@ -23,7 +23,7 @@
 
 ### Mechanism
 
-Given a binary number and a divisor, we convert the binary number into a multiple of the divisor by appending appropriate bits. The restriction here is we are allowed to only append as many bits as the divisor minus 1 (Eg. if divisor is 5 bits, we must append 4 bits). This is so that only one configuration of the composite number is possible. Hence we shift the bits, get the remainder and append it. This composite number is error resistant because inverting of any of these bits will result in the composite number being no longer a multiple of the divisor hence this mechanism proves very effective againg bit-parity errors. However, it may not detect errors after the number of bit-parity errors crosses a threshold, but still, extremely effective.
+Given a binary number and a divisor, we convert the binary number into a multiple of the divisor by appending appropriate bits. The restriction here is we are allowed to only append as many bits as the divisor minus 1 (Eg. if divisor is 5 bits, we must append 4 bits). This is so that only one configuration of the composite number is possible. Hence we shift the bits, get the remainder and append it. This composite number is error resistant because inverting of any of the bits will result in the composite number being no longer a multiple of the divisor hence this mechanism proves very effective against bit-parity errors. However, it may not detect errors after the number of bit-parity errors crosses a threshold, but still, extremely effective. For example, if the bits that have been inverted form a number divisible by the divisor, errors go un-noticed. Hence choice of the divisor must account for most of the common error patterns.
 
 ### Code (C++)
 ```c++

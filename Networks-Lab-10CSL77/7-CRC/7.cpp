@@ -4,7 +4,7 @@
 using namespace std;
 typedef unsigned int uint;
 
-//Input a binary number from user
+//Input a binary number of specified size from user
 inline void input(uint& a,uint size){
 	string s;
 	cin>>s;
@@ -30,42 +30,38 @@ inline void input(uint& a,uint size){
 //Calculate and return CRC bits (16 bits)
 inline uint calcCRC(uint data,uint divisor){
 	uint CRC=data<<16;
-	uint subtractor=divisor<<15;
 
 	//Perform the division operation
-	for(int i=15;i>=0;--i,subtractor>>=1)
-		if((CRC^subtractor)<CRC)
-			CRC^=subtractor;
+	divisor<<=15;
+	for(int i=15;i>=0;--i,divisor>>=1)
+		if((CRC^divisor)<CRC)
+			CRC^=divisor;
 
 	return CRC;
 }
 
 int main(){
-	uint data;									//Data bits (16 bits)
-	uint CRC;									//CRC bits (16 bits)
-	uint data_CRC;								//Data bits appended with CRC bits (16+16 bits)
-	const uint divisor=0b10001000000100001;		//Divisor (CCITT standard x^16 + x^12 + x^5 + x^0)
+	uint data;															//Data bits (16 bits)
+	uint data_CRC;														//Data bits appended with CRC bits (16 + 16 bits)
+	const uint divisor=0b10001000000100001;								//Divisor (CCITT standard: x^16 + x^12 + x^5 + x^0)
 
 	cout<<"Divisor:\n";
 	cout<<bitset<17>(divisor)<<"\n\n";
 
-	//Sending Phase
+	//Sending Phase (Sender has data and divisor)
 	cout<<"Enter data bits:\n";
 	input(data,16);
-	cout<<bitset<16>(data)<<'\n';				//Output the data as 16 bits
+	cout<<bitset<16>(data)<<'\n';										//Output the data as 16 bits
 
-	CRC=calcCRC(data,divisor);
-	data_CRC=(data<<16)|CRC;					//Append the CRC to data
+	data_CRC=(data<<16)|calcCRC(data,divisor);							//Shift data by 16 bits and insert CRC
 	cout<<"Data after calculating CRC:\n";
 	cout<<bitset<32>(data_CRC)<<"\n\n";
 
-	//Receiving Phase
+	//Receiving Phase (Receiver has data_CRC and divisor)
 	cout<<"Enter recieved sequence:\n";
 	input(data_CRC,32);
 
-	CRC=data_CRC&((1<<16)-1);					//Get last 16 bits of data_CRC
-	data=data_CRC>>16;							//Get the data bits
-	if(CRC==calcCRC(data,divisor))
+	if((data_CRC&0b1111111111111111)==calcCRC(data_CRC>>16,divisor))	//If recieved CRC (last 16 bits) equals calculated CRC
 		cout<<"CRC match!\n";
 	else
 		cout<<"CRC mismatch!\n";

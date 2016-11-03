@@ -15,11 +15,15 @@
 	<br><br><img src="../Images/7-2.png?raw=true" width="480px">
 * The **data** bits are the dividend.
 * **REMAINDER** is the CRC bits and **quotient** is discarded.
-* CRC is computed by sender. It is **appended** to the data bits and sent. The reciever just performs a division operation on the entire received bits. After the division, the previously appended bits will be **zeros**. If not, then an **error** is detected.
+* CRC is computed by sender. It is **appended** to the data bits and sent. The reciever just performs a division operation on the entire received bits. After the division, the appended CRC bits should be **zeros**. If not, then an **error** is detected.
 * The divisor is normally called the **generator polynomial** or simply the generator.
 * A **pre-defined divisor** is used. The divisor is **common** between sender and receiver.
 * For 16-bit CRC, the divisor must be **17** bits long with leftmost bit = 1.
 * **CRC-CCITT** (16-bit) standard divisor - 0b10001000000100001.
+
+### Mechanism
+
+Given a binary number and a divisor, we convert the binary number into a multiple of the divisor by appending appropriate bits. The restriction here is we are allowed to only append as many bits as the divisor minus 1 (Eg. if divisor is 5 bits, we must append 4 bits). This is so that only one configuration of the composite number is possible. Hence we shift the bits, get the remainder and append it. This composite number is error resistant because inverting of any of these bits will result in the composite number being no longer a multiple of the divisor hence this mechanism proves very effective againg bit-parity errors. However, it may not detect errors after the number of bit-parity errors crosses a threshold, but still, extremely effective.
 
 ### Code (C++)
 ```c++

@@ -41,9 +41,9 @@ inline uint calcCRC(uint data,uint divisor){
 }
 
 int main(){
-	uint data;															//Data bits (16 bits)
-	uint data_CRC;														//Data bits appended with CRC bits (16 + 16 bits)
-	const uint divisor=0b10001000000100001;								//Divisor (CCITT standard: x^16 + x^12 + x^5 + x^0)
+	uint data;													//Data bits (16 bits)
+	uint data_CRC;												//Data bits appended with CRC bits (16 + 16 bits)
+	const uint divisor=0b10001000000100001;						//Divisor (CCITT standard: x^16 + x^12 + x^5 + x^0)
 
 	cout<<"Divisor:\n";
 	cout<<bitset<17>(divisor)<<"\n\n";
@@ -51,9 +51,9 @@ int main(){
 	//Sending Phase (Sender has data and divisor)
 	cout<<"Enter data bits:\n";
 	input(data,16);
-	cout<<bitset<16>(data)<<'\n';										//Output the data as 16 bits
+	cout<<bitset<16>(data)<<'\n';								//Output the data as 16 bits
 
-	data_CRC=(data<<16)|calcCRC(data,divisor);							//Shift data by 16 bits and insert CRC
+	data_CRC=(data<<16)|calcCRC(data,divisor);					//Shift data by 16 bits and insert CRC
 	cout<<"Data after calculating CRC:\n";
 	cout<<bitset<32>(data_CRC)<<"\n\n";
 
@@ -61,10 +61,11 @@ int main(){
 	cout<<"Enter recieved sequence:\n";
 	input(data_CRC,32);
 
-	if((data_CRC&0b1111111111111111)==calcCRC(data_CRC>>16,divisor))	//If recieved CRC (last 16 bits) equals calculated CRC
-		cout<<"CRC match!\n";
+	data=data_CRC>>16;
+	if((data_CRC&0b1111111111111111)==calcCRC(data,divisor))	//If recieved CRC (last 16 bits) equals calculated CRC
+		cout<<"CRC matches recieved data!\n";
 	else
-		cout<<"CRC mismatch!\n";
+		cout<<"CRC and recieved data mismatch!\n";
 
 	return 0;
 }

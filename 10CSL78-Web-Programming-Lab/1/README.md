@@ -1,5 +1,5 @@
 # 1.Develop and demonstrate a XHTML file that includes Javascript script for the following problems:
-###a) Input: A number n obtained using prompt<br>&nbsp;&nbsp;&nbsp;&nbsp;Output: The first n Fibonacci numbers
+#### a) Input: A number n obtained using prompt<br>&nbsp;&nbsp;&nbsp;&nbsp;Output: The first n Fibonacci numbers
 ###Code (XHTML)
 ```xhtml
 <?xml version="1.0" encoding="utf-8"?>
@@ -32,7 +32,7 @@
 	</body>
 </html>
 ```
-###b) Input: A number n obtained using prompt<br>&nbsp;&nbsp;&nbsp;&nbsp;Output: A table of numbers from 1 to n and their squares using alert
+#### b) Input: A number n obtained using prompt<br>&nbsp;&nbsp;&nbsp;&nbsp;Output: A table of numbers from 1 to n and their squares using alert
 ###Code (XHTML)
 ```xhtml
 <?xml version="1.0" encoding="utf-8"?>

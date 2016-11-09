@@ -1,0 +1,35 @@
+stud-info{
+	color:			black;
+	font-size:		36px;
+	font-weight:	bold;
+	font-style:		italic;
+}
+
+student{
+	color:			gray;
+	font-size:		18px;
+	font-weight:	bold;
+}
+
+stud1,
+stud2,
+stud3{
+	display:		block;
+	padding-left:	18px;
+}
+
+student * *{
+	font-size:	24px;
+}
+
+stud1 *{
+	color:	red;
+}
+
+stud2 *{
+	color:	blue;
+}
+
+stud3 *{
+	color:	green;
+}

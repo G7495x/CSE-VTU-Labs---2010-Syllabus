@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="4b.xsl"?>
+<student>
+	<stud-info>
+		<usn>1AB10CD001</usn>
+		<name>Asd</name>
+		<col>ABC</col>
+		<branch>CD</branch>
+		<yoj>2010</yoj>
+		<email>asd@xyz.com</email>
+	</stud-info>
+</student>

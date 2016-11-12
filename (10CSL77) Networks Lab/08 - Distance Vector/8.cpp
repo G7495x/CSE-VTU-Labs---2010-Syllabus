@@ -2,47 +2,44 @@
 #include <cstdio>
 using namespace std;
 
-class node{
-public:
-	int dist[20];
-	int from[20];
-}
-
 int main(){
-	int n,d[20][20];
-	node route[10];
+	int n;
 
-	cout<<"Enter n of nodes:";
+	cout<<"Enter no. of nodes:";
 	cin>>n;
+
+	int d[n][n];			//Distance matrix
+	int prev[n][n];			//Previous node
+	int i,j,k;
+
 	cout<<"Enter the distance matrix:\n";
-	for(int i=0;i<n;i++){
-		for(int j=0;j<n;j++){
+	for(i=0;i<n;++i){
+		for(j=0;j<n;++j){
 			cin>>d[i][j];
-			d[i][i]=0;					//Distance from i to i = 0
-			route[i].dist[j]=d[i][j];
-			route[i].from[j]=j;
+			prev[i][j]=j;
 		}
+		d[i][i]=0;			//Distance from i to i = 0
 	}
 
 	//Floyd's all pair shortest path algorithm
 	bool flag;
 	do{
 		flag=0;
-		for(int i=0;i<n;i++)
-			for(int j=0;j<n;j++)
-				for(int k=0;k<n;k++)
-					if((route[i].dist[j])>(route[i].dist[k]+route[k].dist[j])){
-						route[i].dist[j]=route[i].dist[k]+route[k].dist[j];
-						route[i].from[j]=k;
+		for(i=0;i<n;++i)
+			for(j=0;j<n;++j)
+				for(k=0;k<n;++k)
+					if(d[i][j]>d[i][k]+d[k][j]){
+						d[i][j]=d[i][k]+d[k][j];
+						prev[i][j]=k;
 						flag=1;
 					}
 	}while(flag);
 
-	for(int i=0;i<n;i++){
-		cout<<"Router info for router: "<<i+1<<'\n';
-		cout<<"Dest\tNext Hop\tDist"<<'\n';
-		for(int j=0;j<n;j++)
-			printf("%d\t%d\t\t%d\n",j+1,route[i].from[j]+1,route[i].dist[j]);
+	for(i=0;i<n;++i){
+		cout<<"Router info for router "<<i+1<<":\n";
+		cout<<"Destination\tNext Hop\tDistance"<<'\n';
+		for(j=0;j<n;++j)
+			printf("%d\t\t%d\t\t%d\n",j+1,prev[i][j]+1,d[i][j]);
 	}
 
 	return 0;

@@ -11,6 +11,21 @@
 * The network topology is assumed to be a **directed-weighted graph**. It is represented by a **directed-weighted cost matrix**.
 * The matrix holds the distances between any 2 nodes in a particular direction. For example **d[i][j]** represents distance from **i** to **j**. (It is directional, d[i][j]≠d[j][i])
 
+### Algorithm
+Floyd's algorithm is used to obtain all pairs' shortest paths. Between any two nodes, an intermediate node is considered and if the indirect path through the intermediate node is shorter than the direct path, the distance between the two nodes is updated to the indirect path's distance. This is done of all pairs of nodes considering all other nodes as intermediate nodes.
+
+let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
+for each vertex v
+	dist[v][v] ← 0
+for each edge (u,v)
+	dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
+for k from 1 to |V|
+	for i from 1 to |V|
+		for j from 1 to |V|
+			if dist[i][j] > dist[i][k] + dist[k][j]
+				dist[i][j] ← dist[i][k] + dist[k][j]
+			end if
+
 ### Code (C++)
 ```c++
 #include <iostream>
@@ -40,9 +55,9 @@ int main(){
 	bool flag;
 	do{
 		flag=0;
-		for(i=0;i<n;++i)
-			for(j=0;j<n;++j)
-				for(k=0;k<n;++k)
+		for(k=0;k<n;++k)
+			for(i=0;i<n;++i)
+				for(j=0;j<n;++j)
 					if(d[i][j]>d[i][k]+d[k][j]){	//If passing through node k is shorter
 						d[i][j]=d[i][k]+d[k][j];
 						nexthop[i][j]=k;			//To go from i to j, go to node k first
@@ -69,7 +84,7 @@ Enter no. of nodes:3
 Enter the distance matrix:
 0       1       4
 1       0       2
-4       2       0
+4       999     0
 Router info for router 1:
 Destination     Next Hop        Distance
 1               1               0
@@ -82,7 +97,8 @@ Destination     Next Hop        Distance
 3               3               2
 Router info for router 3:
 Destination     Next Hop        Distance
-1               2               3
-2               2               2
+1               1               4
+2               1               5
 3               3               0
 ```
+<img src="../Images/8-1.png?raw=true" width="480px">

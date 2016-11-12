@@ -12,7 +12,7 @@
 * The matrix holds the distances between any 2 nodes in a particular direction. For example **d[i][j]** represents distance from **i** to **j**. (It is directional, d[i][j]≠d[j][i])
 
 ### Algorithm
-Floyd's algorithm is used to obtain all pairs' shortest paths. Between any two nodes, an intermediate node is considered and if the indirect path through the intermediate node is shorter than the direct path, the distance between the two nodes is updated to the indirect path's distance. This is done of all pairs of nodes considering all other nodes as intermediate nodes.
+Floyd's algorithm is used to obtain all pairs' shortest paths. Between any two nodes, an intermediate node is considered and if the indirect path through the intermediate node is shorter than the direct path, the distance between the two nodes is updated to the indirect path's distance. This is done for all pairs of nodes considering all other nodes as intermediate nodes.
 <pre>
 let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
 for each vertex v

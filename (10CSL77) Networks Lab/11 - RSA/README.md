@@ -17,9 +17,9 @@
 
 3.	Calculate decryption key y such that (x*y)%((a - 1)*(b - 1)) = 1. At this point, a and b can be discarded.
 
-The public key = {x, n}.
-The private key = {y, n}.
+	The public key = {x, n}.
+	The private key = {y, n}.
 
-x and n are known to both sender and receiver, but only the receiver must know y.
+	x and n are known to both sender and receiver, but only the receiver must know y.
 
-a and b must be large and about the same size and both greater than 1,024 bits.
+	a and b must be large and about the same size and both greater than 1,024 bits.

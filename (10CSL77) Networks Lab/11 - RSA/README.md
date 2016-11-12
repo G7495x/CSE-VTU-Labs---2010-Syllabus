@@ -9,7 +9,8 @@
 * Public key encryption is also known as asymmetric, or two-key encryption.
 * The RSA algorithm has three phases for this: **Key-generation, Encryption, Decryption.**
 * **Key-generation:** The key length is typically 512 bits, which requires an enormous computational power.
-8 Algorithm:
+
+Algorithm:
 
 1.	Choose two roughly 256-bit prime numbers, **a** and **b**, and derive **n = ab**. Plain Text **m** is represented by a number must be less than **n**.
 

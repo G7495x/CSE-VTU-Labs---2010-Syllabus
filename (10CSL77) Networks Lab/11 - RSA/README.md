@@ -17,7 +17,7 @@
 
 3.	Calculate decryption key y such that (x*y)%((a - 1)*(b - 1)) = 1. At this point, a and b can be discarded.
 
-	The public key = {x, n}.
+	The public key = {x, n}.<br>
 	The private key = {y, n}.
 
 	x and n are known to both sender and receiver, but only the receiver must know y.

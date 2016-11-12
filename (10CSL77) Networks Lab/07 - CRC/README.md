@@ -100,6 +100,7 @@ int main(){
 }
 
 ```
+
 ### Code Output
 ```
 $ g++ 7.cpp

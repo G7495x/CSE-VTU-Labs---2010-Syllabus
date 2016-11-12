@@ -1,4 +1,15 @@
 # 8. Write a program for distance vector algorithm to find the suitable path for transmission.
+
+### Intro
+* Distance vector routing protocol is a routing algorithm used in packet-switched networks.
+* It is based on Belman-Ford's algorithm.
+* In a network, shortest path is calculated using this algorithm.
+* Each node/router holds a table called routing table, which has 3 fields: **Destination, Next Hop, Distance.**
+* Each router calculates the shortest path to all destinations requested by incoming packets through this algorithm and maintains this table.
+* To simulate the network tables of a small network, we are instead using **Floyd's all pair shortest path algorithm** to achieve the same result.
+* The network topology is assumed to be a **directed-weighted graph**. It is represented by a **directed weighted cost matrix**.
+* The matrix holds the distances between any 2 nodes in a perticular direction. For example **d[i][j]** represents distance to **j** from **i**. (It is directional, d[i][j]≠d[j][i])
+
 ### Code (C++)
 ```c++
 #include <iostream>
@@ -48,6 +59,7 @@ int main(){
 	return 0;
 }
 ```
+
 ### Code Output
 ```
 $ g++ 8.cpp

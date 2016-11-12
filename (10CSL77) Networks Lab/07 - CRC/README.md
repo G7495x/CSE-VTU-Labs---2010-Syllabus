@@ -101,7 +101,7 @@ int main(){
 
 ```
 ### Code Output
-```bash
+```
 $ g++ 7.cpp
 $ ./a.out
 Divisor:

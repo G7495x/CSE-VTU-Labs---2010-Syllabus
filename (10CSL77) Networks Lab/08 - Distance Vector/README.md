@@ -49,7 +49,7 @@ int main(){
 }
 ```
 ### Code Output
-```bash
+```
 $ g++ 8.cpp
 $ ./a.out
 Enter no. of nodes:3

@@ -100,7 +100,6 @@ int main(){
 }
 
 ```
-
 ### Code Output
 ```bash
 $ g++ 7.cpp

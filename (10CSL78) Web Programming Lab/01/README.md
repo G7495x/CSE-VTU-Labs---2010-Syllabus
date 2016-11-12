@@ -1,6 +1,10 @@
 # 1.Develop and demonstrate a XHTML file that includes Javascript script for the following problems:
 #### a) Input: A number n obtained using prompt<br>&nbsp;&nbsp;&nbsp;&nbsp;Output: The first n Fibonacci numbers
-###Code (XHTML)
+### Important Bits
+* alert(msg):               Displays an alert message. [window.alert()]
+* prompt(msg):              Displays an alert message with input box. The function returns the valu entered by user. [window.prompt()]
+* document.write(content):  Appends content inside body.
+### Code (XHTML)
 ```xhtml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR?xhtml11/DTD/xhtml11.dtd">
@@ -33,7 +37,7 @@
 </html>
 ```
 #### b) Input: A number n obtained using prompt<br>&nbsp;&nbsp;&nbsp;&nbsp;Output: A table of numbers from 1 to n and their squares using alert
-###Code (XHTML)
+### Code (XHTML)
 ```xhtml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR?xhtml11/DTD/xhtml11.dtd">

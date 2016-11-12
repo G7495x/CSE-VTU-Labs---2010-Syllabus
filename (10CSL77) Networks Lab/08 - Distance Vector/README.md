@@ -19,7 +19,7 @@ int main(){
 	for(i=0;i<n;++i){
 		for(j=0;j<n;++j){
 			cin>>d[i][j];
-			prev[i][j]=j;
+			prev[i][j]=j;	//Assume direct hop
 		}
 		d[i][i]=0;			//Distance from i to i = 0
 	}
@@ -31,9 +31,9 @@ int main(){
 		for(i=0;i<n;++i)
 			for(j=0;j<n;++j)
 				for(k=0;k<n;++k)
-					if(d[i][j]>d[i][k]+d[k][j]){
+					if(d[i][j]>d[i][k]+d[k][j]){	//If passing through node k is shorter
 						d[i][j]=d[i][k]+d[k][j];
-						prev[i][j]=k;
+						prev[i][j]=k;				//To go from i to j, pass through k
 						flag=1;
 					}
 	}while(flag);

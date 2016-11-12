@@ -1,7 +1,6 @@
 # 7. Write a program for error detecting code using 16-bit CRC.
 
 ### Intro
-
 * Cyclic Redundancy Check or **CRC**, is an error detection algorithm (**NOT** an error correction algorithm!) for checking bit-parity errors that may occur during network transmission.
 * Given binary data bits, CRC algotithm produces a **CRC bit-sequence** of specified length (For 16-bit CRC, it's 16 bits) using which bit-parity errors can be detected.
 * **Higher** the length of the CRC, the **better** it is at identifying errors, but **longer** it takes to check and detect.
@@ -22,7 +21,6 @@
 * **CRC-CCITT** (16-bit) standard divisor - 0b10001000000100001. (x<sup>16</sup>+x<sup>12</sup>+x<sup>5</sup>+1)
 
 ### Mechanism
-
 Given a binary number and a divisor, we convert the binary number into a multiple of the divisor by appending appropriate bits. The restriction here is we are allowed to only append as many bits as the divisor minus 1 (Eg. if divisor is 5 bits, we must append 4 bits). This is so that only one configuration of the composite number is possible. Hence we shift the bits, get the remainder and append it. This composite number is error resistant because inverting of any of the bits will result in the composite number being no longer a multiple of the divisor hence this mechanism proves very effective against bit-parity errors. However, it may not detect errors after the number of bit-parity errors crosses a threshold, but still, extremely effective.
 
 For example, if the bits that have been inverted are represented as a binary number where 1's represent the inverted bits and the others are 0's, and the resulting number is divisible by the divisor, errors go un-noticed (This number can be assumed to have been XOR'd with the transmitted data to form the erroneous data). Hence choice of the divisor must account for most of the common error patterns.

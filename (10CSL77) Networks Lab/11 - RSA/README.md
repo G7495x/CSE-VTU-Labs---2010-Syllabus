@@ -11,15 +11,15 @@
 * **Key-generation:** The key length is typically 512 bits, which requires an enormous computational power.
 8 Algorithm:
 
-1.	Choose two roughly 256-bit prime numbers, a and b, and derive n = ab. Plain Text m is represented by a number must be less than n.
+1.	Choose two roughly 256-bit prime numbers, **a** and **b**, and derive **n = ab**. Plain Text **m** is represented by a number must be less than **n**.
 
-2.	Select encryption key x such that x and (a - 1)(b - 1) are relatively prime.
+2.	Select encryption key **x** such that **x** and **(a - 1)(b - 1)** are relatively prime.
 
-3.	Calculate decryption key y such that xy mod (a - 1)(b - 1) = 1. At this point, a and b can be discarded.
+3.	Calculate decryption key **y** such that **xy** mod **(a - 1)(b - 1)** = 1. At this point, **a** and **b** can be discarded.
 
-	The public key = {x,n}.<br>
-	The private key = {y,n}.
+	The public key = **{x,n}**.<br>
+	The private key = **{y,n}**.
 
-	x and n are known to both sender and receiver, but only the receiver must know y.
+	**x** and **n** are known to both sender and receiver, but only the receiver must know **y**.
 
-	a and b must be large and about the same size and both greater than 1,024 bits.
+	**a** and **b** must be large and about the same size and both greater than 1,024 bits.

@@ -18,7 +18,7 @@
 * CRC is computed by sender. It is **appended** to the data bits and sent. The reciever just performs a division operation on the entire received bits. After the division, the appended CRC bits should be **zeros**. If not, then an **error** is detected.
 * The divisor is normally called the **generator polynomial** or simply the generator.
 * A **pre-defined divisor** is used. The divisor is **common** between sender and receiver.
-* For 16-bit CRC, the divisor must be **17** bits long with leftmost bit = 1.
+* For 16-bit CRC, the divisor must be **16+1=17** bits long with leftmost bit = 1.
 * **CRC-CCITT** (16-bit) standard divisor - 0b10001000000100001.
 
 ### Mechanism

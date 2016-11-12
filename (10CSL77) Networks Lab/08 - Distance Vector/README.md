@@ -19,7 +19,7 @@ int main(){
 	for(i=0;i<n;++i){
 		for(j=0;j<n;++j){
 			cin>>d[i][j];
-			nexthop[i][j]=j;	//At first, assume direct hop
+			nexthop[i][j]=j;	//At first, assume direct hop from i to j
 		}
 		d[i][i]=0;				//Distance from i to i = 0
 	}
@@ -33,7 +33,7 @@ int main(){
 				for(k=0;k<n;++k)
 					if(d[i][j]>d[i][k]+d[k][j]){	//If passing through node k is shorter
 						d[i][j]=d[i][k]+d[k][j];
-						nexthop[i][j]=k;			//To go from i to j, go to node k firsly
+						nexthop[i][j]=k;			//To go from i to j, go to node k first
 						flag=1;
 					}
 	}while(flag);

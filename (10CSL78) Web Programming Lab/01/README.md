@@ -4,6 +4,7 @@
 * alert(msg):               Displays an alert message. [window.alert()]
 * prompt(msg):              Displays an alert message with input box. The function returns the valu entered by user. [window.prompt()]
 * document.write(content):  Appends content inside body.
+
 ### Code (XHTML)
 ```xhtml
 <?xml version="1.0" encoding="utf-8"?>

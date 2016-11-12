@@ -36,7 +36,7 @@ int main(){
 	}while(flag);
 
 	for(i=0;i<n;++i){
-		cout<<"Router info for router "<<i+1<<":\n";
+		cout<<"Routing table of router "<<i+1<<":\n";
 		cout<<"Destination\tNext Hop\tDistance"<<'\n';
 		for(j=0;j<n;++j)
 			printf("%d\t\t%d\t\t%d\n",j+1,nexthop[i][j]+1,d[i][j]);

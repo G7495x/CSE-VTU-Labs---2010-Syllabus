@@ -5,6 +5,8 @@
 * Encryption uses a piece of data called **key** which is used to transform/encrypt the data.
 * Sender encrypts data and sends it. Receiver receives data and de-encrypts it.
 * The security of any encryption scheme depends on the length of the key.
+
+
 * RSA algorithm is a **public key encryption** algorithm (Sender and receiver use different keys).
 * Public key encryption is also known as asymmetric, or two-key encryption.
 * The RSA algorithm has three phases for this: **Key-generation, Encryption, Decryption.**
@@ -12,7 +14,7 @@
 
 Key-generation algorithm:
 
-1.	Choose two prime numbers, **a** and **b**, and derive **n = ab**. Plain Text **m** is represented by a number and **must** be less than **n**.
+1.	Choose two prime numbers, **a** and **b**, and derive **n = ab**. Plain Text **m** is represented by a number and **must** be less than **n**. **a** and **b** must be large and about the same size.
 
 2.	Select encryption key **x** such that **x** and **(a - 1)(b - 1)** are relatively prime.
 
@@ -20,8 +22,6 @@ Key-generation algorithm:
 
 	The public key = **{x,n}**.<br>
 	The private key = **{y,n}**.
-
-	**a** and **b** must be large and about the same size.
 
 * **Encryption:** Both sender and receiver must know the value of n. The sender knows the value of x, and only the receiver knows the value of y.
 

@@ -28,8 +28,8 @@ For example, if the bits that have been inverted are represented as a binary num
 ### Code (C++)
 ```c++
 #include <iostream>
-#include <cstdlib>
-#include <bitset>
+#include <cstdlib>		//exit()
+#include <bitset>		//bitset<>()
 using namespace std;
 typedef unsigned int uint;
 

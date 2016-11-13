@@ -2,7 +2,7 @@
 ### Code (C++)
 ```c++
 #include <iostream>
-#include <cstdlib>
+#include <cstdlib>		//rand()
 using namespace std;
 
 int main(){

@@ -11,16 +11,16 @@
 * The RSA algorithm has three phases for this: **Key-generation, Encryption, Decryption.**
 * **Key-generation:** The key length is typically 512 bits, which requires an enormous computational power.
 
-Key-generation algorithm:
+	Key-generation algorithm:
 
-1.	Choose two prime numbers, **a** and **b**, and derive **n = ab**. Plain Text **m** is represented by a number and **must** be less than **n**. **a** and **b** must be large and about the same size.
+	1.	Choose two prime numbers, **a** and **b**, and derive **n = ab**. Plain Text **m** is represented by a number and **must** be less than **n**. **a** and **b** must be large and about the same size.
 
-2.	Select encryption key **x** such that **x** and **(a - 1)(b - 1)** are relatively prime.
+	2.	Select encryption key **x** such that **x** and **(a - 1)(b - 1)** are relatively prime.
 
-3.	Calculate decryption key **y** such that **xy mod (a - 1)(b - 1)** = 1. At this point, **a** and **b** can be discarded.
+	3.	Calculate decryption key **y** such that **xy mod (a - 1)(b - 1)** = 1. At this point, **a** and **b** can be discarded.
 
-	The public key = **{x,n}**.<br>
-	The private key = **{y,n}**.
+		The public key = **{x,n}**.<br>
+		The private key = **{y,n}**.
 
 * **Encryption:** Both sender and receiver must know the value of n. The sender knows the value of x, and only the receiver knows the value of y.
 
@@ -28,7 +28,7 @@ Key-generation algorithm:
 * **Decryption:**
 
 	**m** = **c<sup>y</sup>** mod **n**.
-* Further more, lookup **Diffie Hellman Key-Exchange protocol** for secure exchange of keys.
+* Further more, look-up **Diffie Hellman Key-Exchange protocol** for secure exchange of keys.
 
 ### Code
 ```c++

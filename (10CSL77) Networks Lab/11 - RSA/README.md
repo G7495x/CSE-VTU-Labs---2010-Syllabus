@@ -11,7 +11,7 @@
 * The RSA algorithm has three phases for this: **Key-generation, Encryption, Decryption.**
 * **Key-generation:** The key length is typically 512 bits, which requires an enormous computational power.
 
-	Key-generation algorithm:
+	Algorithm:
 
 	1.	Choose two prime numbers, **a** and **b**, and derive **n = ab**. Plain Text **m** is represented by a number and **must** be less than **n**. **a** and **b** must be large and about the same size.
 
@@ -22,7 +22,7 @@
 		The public key = **{x,n}**.<br>
 		The private key = **{y,n}**.
 
-* **Encryption:** Both sender and receiver must know the value of n. The sender knows the value of x, and only the receiver knows the value of y.
+* **Encryption:** Both sender and receiver must know the value of **n**. The sender knows the value of **x**, and only the receiver knows the value of **y**.
 
 	Cipher text, **c** = **m<sup>x</sup>** mod **n**.
 * **Decryption:**
@@ -30,7 +30,7 @@
 	**m** = **c<sup>y</sup>** mod **n**.
 * Further more, look-up **Diffie Hellman Key-Exchange protocol** for secure exchange of keys.
 
-### Code
+### Code (C++)
 ```c++
 #include <iostream>
 using namespace std;
@@ -72,10 +72,11 @@ int main(){
 	int m[len];						//Plain text
 	int c[len];						//Cipher text
 
-	//Encryption phase (c = m^x mod n)
-	for(i=0;i<len;++i){
+	for(i=0;i<len;++i)
 		m[i]=msg[i];				//Convert char to int
 
+	//Encryption phase (c = m^x mod n)
+	for(i=0;i<len;++i){
 		c[i]=m[i]%n;
 		for(j=1;j<x;++j)
 			c[i]=c[i]*m[i]%n;

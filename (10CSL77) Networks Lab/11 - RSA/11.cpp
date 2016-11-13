@@ -38,10 +38,11 @@ int main(){
 	int m[len];						//Plain text
 	int c[len];						//Cipher text
 
-	//Encryption phase (c = m^x mod n)
-	for(i=0;i<len;++i){
+	for(i=0;i<len;++i)
 		m[i]=msg[i];				//Convert char to int
 
+	//Encryption phase (c = m^x mod n)
+	for(i=0;i<len;++i){
 		c[i]=m[i]%n;
 		for(j=1;j<x;++j)
 			c[i]=c[i]*m[i]%n;

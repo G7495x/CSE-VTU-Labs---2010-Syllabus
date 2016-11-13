@@ -2,29 +2,38 @@
 ### Code (C++)
 ```c++
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 int main(){
-	int incoming,outgoing,bucketsize,n,store=0;
-	cout<<"Enter bucket size:\t";
-	cin>>bucketsize;
-	cout<<"Enter outgoing rate:\t";
-	cin>>outgoing;
+	int buffersize,n;
+	cout<<"Enter buffer size:\t";
+	cin>>buffersize;
 	cout<<"Enter no. of inputs:\t";
 	cin>>n;
 
+	int sent,recieved,dropped,bufferload=0;
+	cout<<"Sent\t\tReceived\tDropped\t\tBuffer Load\n";
 	while(n!=0){
-		cout<<"\nEnter no. of incoming packets:\t";
-		cin>>incoming;
-		if(incoming<=(bucketsize-store))
-			store+=incoming;
-		else{
-			cout<<"Dropped "<<incoming-(bucketsize-store)<<" packets\n";
-			store=bucketsize;
+		sent=0;
+		if(bufferload>0){
+			--bufferload;
+			sent=1;
 		}
-		cout<<"Bucket occupancy:\t\t"<<store<<"/"<<bucketsize<<'\n';
-		store=store-outgoing;
-		cout<<"After outgoing:\t\t\t"<<store<<"/"<<bucketsize<<'\n';
+
+		recieved=rand()%5;
+		dropped=0;
+		if(bufferload+recieved>buffersize){
+			dropped=bufferload+recieved-buffersize;
+			bufferload=buffersize;
+		}
+		else
+			bufferload+=recieved;
+
+		cout<<sent<<"\t\t";
+		cout<<recieved<<"\t\t";
+		cout<<dropped<<"\t\t";
+		cout<<bufferload<<'/'<<buffersize<<'\n';
 
 		n--;
 	}
@@ -34,22 +43,17 @@ int main(){
 ```
 ### Output:
 ```
-$ g++ 12.cpp
-$ ./a.out
-Enter bucket size:      20
-Enter outgoing rate:    5
-Enter no. of inputs:    3
-
-Enter no. of incoming packets:  12
-Bucket occupancy:               12/20
-After outgoing:                 7/20
-
-Enter no. of incoming packets:  12
-Bucket occupancy:               19/20
-After outgoing:                 14/20
-
-Enter no. of incoming packets:  12
-Dropped 6 packets
-Bucket occupancy:               20/20
-After outgoing:                 15/20
+Enter buffer size:      10
+Enter no. of inputs:    10
+Sent            Received        Dropped         Buffer Load
+0               1               0               1/10
+1               2               0               2/10
+1               4               0               5/10
+1               0               0               4/10
+1               4               0               7/10
+1               4               0               10/10
+1               3               2               10/10
+1               3               2               10/10
+1               2               1               10/10
+1               4               3               10/10
 ```

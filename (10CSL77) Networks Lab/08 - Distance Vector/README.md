@@ -52,18 +52,14 @@ int main(){
 	}
 
 	//Floyd's all pair shortest path algorithm
-	bool flag;
-	do{
-		flag=0;
-		for(k=0;k<n;++k)
-			for(i=0;i<n;++i)
-				for(j=0;j<n;++j)
-					if(d[i][j]>d[i][k]+d[k][j]){	//If passing through node k is shorter
-						d[i][j]=d[i][k]+d[k][j];
-						nexthop[i][j]=k;			//To go from i to j, go to node k first
-						flag=1;
-					}
-	}while(flag);
+	for(k=0;k<n;++k)
+		for(i=0;i<n;++i)
+			for(j=0;j<n;++j)
+				if(d[i][j]>d[i][k]+d[k][j]){	//If passing through node k is shorter
+					d[i][j]=d[i][k]+d[k][j];	//Update distance matrix
+					nexthop[i][j]=k;			//To go from i to j, go to node k first
+					flag=1;
+				}
 
 	for(i=0;i<n;++i){
 		cout<<"Routing table of router "<<i+1<<":\n";

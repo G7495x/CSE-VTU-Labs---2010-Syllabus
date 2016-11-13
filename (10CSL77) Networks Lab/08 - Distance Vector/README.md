@@ -29,7 +29,6 @@ for k from 1 to |V|
 ### Code (C++)
 ```c++
 #include <iostream>
-#include <cstdio>
 using namespace std;
 
 int main(){
@@ -58,19 +57,22 @@ int main(){
 				if(d[i][j]>d[i][k]+d[k][j]){	//If passing through node k is shorter
 					d[i][j]=d[i][k]+d[k][j];	//Update distance matrix
 					nexthop[i][j]=k;			//To go from i to j, go to node k first
-					flag=1;
 				}
 
 	for(i=0;i<n;++i){
 		cout<<"Routing table of router "<<i+1<<":\n";
 		cout<<"Destination\tNext Hop\tDistance"<<'\n';
 		for(j=0;j<n;++j)
-			if(j!=i)
-				printf("%d\t\t%d\t\t%d\n",j+1,nexthop[i][j]+1,d[i][j]);
+			if(j!=i){
+				cout<<j+1<<"\t\t";
+				cout<<nexthop[i][j]+1<<"\t\t";
+				cout<<d[i][j]<<'\n';
+			}
 	}
 
 	return 0;
 }
+
 ```
 
 ### Code Output

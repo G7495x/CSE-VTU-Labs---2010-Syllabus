@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cstdlib>
-#include <bitset>
+#include <cstdlib>		//exit()
+#include <bitset>		//bitset<>()
 using namespace std;
 typedef unsigned int uint;
 

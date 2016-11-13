@@ -5,6 +5,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <fcntl.h>
+#include <limits.h>		//PIPE_BUF
 
 inline void check(int ret,char* cmd){
 	if(ret==-1){
@@ -15,14 +16,14 @@ inline void check(int ret,char* cmd){
 
 int main(int argc,char** argv){
 	int fifo,file;
-	char filename[256],data[10240];
+	char filename[256],data[PIPE_BUF];
 	int count;
 
 	switch(argc){
 		//Server
 		case 1:		printf("SERVER\n");
 
-					check(mkfifo("FIFO",S_IFIFO|S_IRWXU|S_IRWXG|S_IRWXO),"mkfifo");
+					check(mkfifo("FIFO",0777),"mkfifo");
 					check(fifo=open("FIFO",O_RDONLY|O_NONBLOCK),"open");
 					printf("Waiting for client...\n");
 					while((count=read(fifo,filename,sizeof(filename)))==0)	sleep(1);
@@ -51,7 +52,7 @@ int main(int argc,char** argv){
 					close(fifo);
 
 					sleep(1);
-					check(mkfifo("FIFO",S_IFIFO|S_IRWXU|S_IRWXG|S_IRWXO),"mkfifo");
+					check(mkfifo("FIFO",0777),"mkfifo");
 					check(fifo=open("FIFO",O_RDONLY|O_NONBLOCK),"open");
 					printf("Waiting for server...\n");
 					while((count=read(fifo,data,sizeof(data)))==0)	sleep(1);
@@ -60,6 +61,7 @@ int main(int argc,char** argv){
 					close(fifo);
 					unlink("FIFO");
 					break;
+
 		default:	perror("Invalid no. of arguments!\n");
 					exit(1);
 	}

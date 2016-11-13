@@ -69,7 +69,8 @@ int main(){
 		cout<<"Routing table of router "<<i+1<<":\n";
 		cout<<"Destination\tNext Hop\tDistance"<<'\n';
 		for(j=0;j<n;++j)
-			printf("%d\t\t%d\t\t%d\n",j+1,nexthop[i][j]+1,d[i][j]);
+			if(j!=i)
+				printf("%d\t\t%d\t\t%d\n",j+1,nexthop[i][j]+1,d[i][j]);
 	}
 
 	return 0;
@@ -87,18 +88,15 @@ Enter the distance matrix:
 4       999     0
 Routing table of router 1:
 Destination     Next Hop        Distance
-1               1               0
 2               2               1
 3               2               3
 Routing table of router 2:
 Destination     Next Hop        Distance
 1               1               1
-2               2               0
 3               3               2
 Routing table of router 3:
 Destination     Next Hop        Distance
 1               1               4
 2               1               5
-3               3               0
 ```
 <img src="../Images/8-1.png?raw=true" width="480px">

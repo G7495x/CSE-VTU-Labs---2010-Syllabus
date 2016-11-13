@@ -1,4 +1,5 @@
 # 12. Write a program for congestion control using leaky bucket algorithm.
+
 ### Code (C++)
 ```c++
 #include <iostream>
@@ -41,8 +42,11 @@ int main(){
 	return 0;
 }
 ```
+
 ### Output:
 ```
+$ g++ 12.cpp
+$ ./a.out
 Enter buffer size:      10
 Enter no. of inputs:    10
 Sent            Received        Dropped         Buffer Load

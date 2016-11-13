@@ -13,7 +13,7 @@
 
 ### Algorithm
 Floyd's algorithm is used to obtain all pairs' shortest paths. Between any two nodes, an intermediate node is considered and if the indirect path through the intermediate node is shorter than the direct path, the distance between the two nodes is updated to the indirect path's distance. This is done for all pairs of nodes considering all other nodes as intermediate nodes.
-<pre>
+```
 let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
 for each vertex v
 	dist[v][v] ← 0
@@ -25,7 +25,8 @@ for k from 1 to |V|
 			if dist[i][j] > dist[i][k] + dist[k][j]
 				dist[i][j] ← dist[i][k] + dist[k][j]
 			end if
-</pre>
+```
+
 ### Code (C++)
 ```c++
 #include <iostream>
@@ -97,4 +98,5 @@ Destination     Next Hop        Distance
 1               1               4
 2               1               5
 ```
+
 <img src="../Images/8-1.png?raw=true" width="480px">

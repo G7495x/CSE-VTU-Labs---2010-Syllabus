@@ -1,27 +1,36 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 int main(){
-	int incoming,outgoing,bucketsize,n,store=0;
-	cout<<"Enter bucket size:\t";
-	cin>>bucketsize;
-	cout<<"Enter outgoing rate:\t";
-	cin>>outgoing;
+	int buffersize,n;
+	cout<<"Enter buffer size:\t";
+	cin>>buffersize;
 	cout<<"Enter no. of inputs:\t";
 	cin>>n;
 
+	int sent,recieved,dropped,bufferload=0;
+	cout<<"Sent\t\tReceived\tDropped\t\tBuffer Load\n";
 	while(n!=0){
-		cout<<"\nEnter no. of incoming packets:\t";
-		cin>>incoming;
-		if(incoming<=(bucketsize-store))
-			store+=incoming;
-		else{
-			cout<<"Dropped "<<incoming-(bucketsize-store)<<" packets\n";
-			store=bucketsize;
+		sent=0;
+		if(bufferload>0){
+			--bufferload;
+			sent=1;
 		}
-		cout<<"Bucket occupancy:\t\t"<<store<<"/"<<bucketsize<<'\n';
-		store=store-outgoing;
-		cout<<"After outgoing:\t\t\t"<<store<<"/"<<bucketsize<<'\n';
+
+		recieved=rand()%5;
+		dropped=0;
+		if(bufferload+recieved>buffersize){
+			dropped=bufferload+recieved-buffersize;
+			bufferload=buffersize;
+		}
+		else
+			bufferload+=recieved;
+
+		cout<<sent<<"\t\t";
+		cout<<recieved<<"\t\t";
+		cout<<dropped<<"\t\t";
+		cout<<bufferload<<'/'<<buffersize<<'\n';
 
 		n--;
 	}

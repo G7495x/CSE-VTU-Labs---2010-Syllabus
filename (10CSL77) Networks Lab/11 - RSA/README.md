@@ -4,7 +4,8 @@
 * Encryption is convertion of data/information into ciphertext so as to prevent information leakage to a 3rd party.
 * Encryption uses a piece of data called **key** which is used to transform/encrypt the data.
 * Sender encrypts data and sends it. Receiver receives data and de-encrypts it.
-* The security of any encryption scheme depends on the length of the key.<br><br>
+* The security of any encryption scheme depends on the length of the key.
+<br><br>
 * RSA algorithm is a **public key encryption** algorithm (Sender and receiver use different keys).
 * Public key encryption is also known as asymmetric, or two-key encryption.
 * The RSA algorithm has three phases for this: **Key-generation, Encryption, Decryption.**

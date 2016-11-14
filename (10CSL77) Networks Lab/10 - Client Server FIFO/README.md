@@ -77,22 +77,18 @@ int main(int argc,char** argv){
 
 ### Output
 
-Server:
 ```
+<Terminal 1 - Server>			<Terminal 2 - Client>
 $ gcc 10.c
 $ ./a.out
 SERVER
 Waiting for client...
+								$ ./a.out Hello.txt
+								CLIENT
+								Requesting Hello.txt
 Reading file Hello.txt
+								Waiting for server...
 Writing back to client
-```
-
-Client:
-```
-$ ./a.out Hello.txt
-CLIENT
-Requesting Hello.txt
-Waiting for server...
-DATA:
-Hello World!!!
+								DATA:
+								Hello World!!!
 ```

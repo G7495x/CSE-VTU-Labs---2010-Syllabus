@@ -77,8 +77,8 @@ int main(int argc,char** argv){
 
 ### Output
 
-```
 <Terminal 1 - Server>			<Terminal 2 - Client>
+```
 $ gcc 10.c
 $ ./a.out
 SERVER

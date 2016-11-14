@@ -3,12 +3,12 @@
 ### Code (C)
 ```c
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <fcntl.h>
+#include <stdlib.h>		//exit()
+#include <string.h>		//strlen()
+#include <unistd.h>		//read(),write(),close(),unlink(),sleep()
+#include <sys/stat.h>	//mkfifo(),open()
+#include <sys/types.h>	//mkfifo(),open()
+#include <fcntl.h>		//open()
 #include <limits.h>		//PIPE_BUF
 
 inline void check(int ret,char* cmd){

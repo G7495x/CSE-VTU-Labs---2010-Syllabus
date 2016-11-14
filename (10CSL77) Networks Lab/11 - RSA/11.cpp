@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdio>		//gets()
+#include <cstring>		//strlen()
 using namespace std;
 
 int main(){
@@ -21,11 +23,11 @@ int main(){
 	for(y=2;x*y%z!=1;++y);			//Find y such that xy mod (a-1)(b-1) = 1
 	cout<<"y:\t\t"<<y<<'\n';
 
-	string msg;
+	char msg[1024];
 	cout<<"Enter message to be encrypted:\n";
-	cin>>msg;
+	gets(msg);
 
-	int len=msg.length();
+	int len=strlen(msg);
 	int m[len];						//Plain text
 	int c[len];						//Cipher text
 

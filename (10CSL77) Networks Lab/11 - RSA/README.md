@@ -33,11 +33,13 @@
 ### Mechanism
 Two approximately equal, large prime numbers **a** and **b** are picked and **n = ab**. **a** and **b** must be prime because the receiver receives only **x** and **n**. So, if **a** and **b** are primes, they can be extracted from **n**.
 
-**n** must be greater than **m** because during decryption, to get back the original message, mod **n** operation is performed. If **n** was less than or equal to **m**, the remainder can never be **m**.
+**n** must be greater than **m** because during decryption, to get back the original message, mod **n** operation is performed. If **n** was less than or equal to **m**, the remainder can never be **m** and original message can never be retreived.
 
 ### Code (C++)
 ```c++
 #include <iostream>
+#include <cstdio>		//gets()
+#include <cstring>		//strlen()
 using namespace std;
 
 int main(){
@@ -60,11 +62,11 @@ int main(){
 	for(y=2;x*y%z!=1;++y);			//Find y such that xy mod (a-1)(b-1) = 1
 	cout<<"y:\t\t"<<y<<'\n';
 
-	string msg;
+	char msg[1024];
 	cout<<"Enter message to be encrypted:\n";
-	cin>>msg;
+	gets(msg);
 
-	int len=msg.length();
+	int len=strlen(msg);
 	int m[len];						//Plain text
 	int c[len];						//Cipher text
 

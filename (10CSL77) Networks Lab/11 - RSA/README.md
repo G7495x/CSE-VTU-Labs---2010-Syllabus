@@ -36,6 +36,7 @@ Two approximately equal, large prime numbers **a** and **b** are picked and **n 
 **n** must be greater than **m** because during decryption, to get back the original message, mod **n** operation is performed. If **n** was less than or equal to **m**, the remainder can never be **m** and original message can never be retreived.
 
 ### Code (C++)
+```c++
 #include <iostream>
 #include <cstdio>		//gets()
 #include <cstring>		//strlen()

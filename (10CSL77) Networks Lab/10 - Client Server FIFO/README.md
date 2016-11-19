@@ -28,8 +28,8 @@ int main(int argc,char** argv){
 		case 1:		printf("SERVER\n");
 
 					check(mkfifo("FIFO",0777),"mkfifo");
-					check(fifo=open("FIFO",O_RDONLY|O_NONBLOCK),"open");
 					printf("Waiting for client...\n");
+					check(fifo=open("FIFO",O_RDONLY),"open");
 					while((count=read(fifo,filename,sizeof(filename)))==0)	sleep(1);
 					check(count,"read");
 					filename[count]='\0';
@@ -58,8 +58,8 @@ int main(int argc,char** argv){
 
 					sleep(1);
 					check(mkfifo("FIFO",0777),"mkfifo");
-					check(fifo=open("FIFO",O_RDONLY|O_NONBLOCK),"open");
 					printf("Waiting for server...\n");
+					check(fifo=open("FIFO",O_RDONLY),"open");
 					while((count=read(fifo,data,sizeof(data)))==0)	sleep(1);
 					check(count,"read");
 					data[count]='\0';

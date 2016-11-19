@@ -27,13 +27,14 @@ int main(int argc,char** argv){
 					check(fifo=open("FIFO",O_RDONLY|O_NONBLOCK),"open");
 					printf("Waiting for client...\n");
 					while((count=read(fifo,filename,sizeof(filename)))==0)	sleep(1);
+					check(count,"read");
 					filename[count]='\0';
 					close(fifo);
 					unlink("FIFO");
 
 					printf("Reading file %s\n",filename);
 					check(file=open(filename,O_RDONLY),"open");
-					count=read(file,data,sizeof(data));
+					check(count=read(file,data,sizeof(data)),"read");
 					data[count]='\0';
 					close(file);
 
@@ -56,6 +57,7 @@ int main(int argc,char** argv){
 					check(fifo=open("FIFO",O_RDONLY|O_NONBLOCK),"open");
 					printf("Waiting for server...\n");
 					while((count=read(fifo,data,sizeof(data)))==0)	sleep(1);
+					check(count,"read");
 					data[count]='\0';
 					printf("DATA:\n%s\n",data);
 					close(fifo);

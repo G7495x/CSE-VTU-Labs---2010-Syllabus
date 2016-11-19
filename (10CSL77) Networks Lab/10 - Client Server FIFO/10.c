@@ -23,45 +23,45 @@ int main(int argc,char** argv){
 		//Server
 		case 1:		printf("SERVER\n");
 
-					check(mkfifo("FIFO",0777),"mkfifo");
+					check(mkfifo("FIFO",0777),"mkfifo");								//Make fifo
 					printf("Waiting for client...\n");
-					check(fifo=open("FIFO",O_RDONLY),"open");
-					while((count=read(fifo,filename,sizeof(filename)))==0)	sleep(1);
-					check(count,"read");
-					filename[count]='\0';
-					close(fifo);
-					unlink("FIFO");
+					check(fifo=open("FIFO",O_RDONLY),"open");							//Bind as reader
+					while((count=read(fifo,filename,sizeof(filename)))==0)	sleep(1);	//Check repeatedly until filename is written
+					check(count,"read");												//If read() failed
+					filename[count]='\0';												//Mannually null terminate the string
+					close(fifo);														//Unbind
+					unlink("FIFO");														//Delete fifo file
 
 					printf("Reading file %s\n",filename);
-					check(file=open(filename,O_RDONLY),"open");
-					check(count=read(file,data,sizeof(data)),"read");
-					data[count]='\0';
-					close(file);
+					check(file=open(filename,O_RDONLY),"open");							//Open requested file
+					check(count=read(file,data,sizeof(data)),"read");					//Read the contents
+					data[count]='\0';													//Mannually null terminate the string
+					close(file);														//Close the file
 
 					sleep(2);
-					check(fifo=open("FIFO",O_WRONLY),"open");
+					check(fifo=open("FIFO",O_WRONLY),"open");							//Bind as writer
 					printf("Writing back to client\n");
-					check(write(fifo,data,strlen(data)),"write");
-					close(fifo);
+					check(write(fifo,data,strlen(data)),"write");						//Write to fifo
+					close(fifo);														//Unbind
 					break;
 		//Client
 		case 2:		printf("CLIENT\n");
 
-					check(fifo=open("FIFO",O_WRONLY),"open");
+					check(fifo=open("FIFO",O_WRONLY),"open");							//Bind as writer
 					printf("Requesting %s\n",argv[1]);
-					check(write(fifo,argv[1],strlen(argv[1])),"write");
-					close(fifo);
+					check(write(fifo,argv[1],strlen(argv[1])),"write");					//Write to fifo
+					close(fifo);														//Unbind
 
 					sleep(1);
-					check(mkfifo("FIFO",0777),"mkfifo");
+					check(mkfifo("FIFO",0777),"mkfifo");								//Make fifo
 					printf("Waiting for server...\n");
-					check(fifo=open("FIFO",O_RDONLY),"open");
-					while((count=read(fifo,data,sizeof(data)))==0)	sleep(1);
-					check(count,"read");
-					data[count]='\0';
+					check(fifo=open("FIFO",O_RDONLY),"open");							//Bind as reader
+					while((count=read(fifo,data,sizeof(data)))==0)	sleep(1);			//Check repeatedly until data is written
+					check(count,"read");												//If read() failed
+					data[count]='\0';													//Mannually null terminate the string
 					printf("DATA:\n%s\n",data);
-					close(fifo);
-					unlink("FIFO");
+					close(fifo);														//Unbind
+					unlink("FIFO");														//Delete fifo file
 					break;
 
 		default:	perror("Invalid no. of arguments!\n");

@@ -33,11 +33,8 @@ int main(){
 		cout<<"Routing table of router "<<i+1<<":\n";
 		cout<<"Destination\tNext Hop\tDistance"<<'\n';
 		for(j=0;j<n;++j)
-			if(j!=i){
-				cout<<j+1<<"\t\t";
-				cout<<nexthop[i][j]+1<<"\t\t";
-				cout<<d[i][j]<<'\n';
-			}
+			if(j!=i)
+				cout<<j+1<<"\t\t"<<nexthop[i][j]+1<<"\t\t"<<d[i][j]<<'\n';
 	}
 
 	return 0;

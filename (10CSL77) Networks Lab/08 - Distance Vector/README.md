@@ -39,7 +39,7 @@ int main(){
 	cin>>n;
 
 	int d[n][n];				//Distance matrix, d[i][j] represents distance between nodes i and j
-	int nexthop[n][n];			//Next-hop matrix, nexthop[i][j] holds next hop between nodes i and j
+	int nexthop[n][n];			//Next-hop matrix, nexthop[i][j] holds next hop node between nodes i and j
 	int i,j,k;
 
 	cout<<"Enter the distance matrix:\n";

@@ -50,18 +50,18 @@ int main(){
 
 	//Sending Phase (Sender has data and divisor)
 	cout<<"Enter data bits:\n";
-	input(data,16);
-	cout<<bitset<16>(data)<<'\n';								//Output the data as 16 bits
+	input(data,16);												//Input a number in binary (data)
+	cout<<bitset<16>(data)<<'\n';								//Output the data number as 16 bits
 
 	data_CRC=(data<<16)|calcCRC(data,divisor);					//Shift data by 16 bits and insert CRC
 	cout<<"Data after calculating CRC:\n";
-	cout<<bitset<32>(data_CRC)<<"\n\n";
+	cout<<bitset<32>(data_CRC)<<"\n\n";							//Output data + crc
 
 	//Receiving Phase (Receiver has data_CRC and divisor)
 	cout<<"Enter recieved sequence:\n";
-	input(data_CRC,32);
+	input(data_CRC,32);											//Input data + crc
 
-	data=data_CRC>>16;
+	data=data_CRC>>16;											//Data is first 16 bits only
 	if((data_CRC&0b1111111111111111)==calcCRC(data,divisor))	//If recieved CRC (last 16 bits) equals calculated CRC
 		cout<<"CRC matches recieved data!\n";
 	else

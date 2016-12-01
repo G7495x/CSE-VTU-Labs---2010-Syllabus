@@ -5,7 +5,7 @@
   Output: The first n Fibonacci numbers
   2. Input: A number n obtained using prompt<br>
   Output: A table of numbers from 1 to n and their squares using alert
-<br>
+<br><br>
 2. 
   1. Develop and demonstrate, using Javascript script, a XHTML document that collects the USN (The valid format is: A digit from 1 to 4 followed by two upper-case characters followed by two digits followed by two upper-case characters followed by three digits; no embedded spaces allowed) of the user. Event handler must be included for the form element that collects this information to validate the input. Messages in the alert windows must be produced when errors are detected.
   2. Modify the above program to get the current semester also (restricted to be a number from 1 to 8)

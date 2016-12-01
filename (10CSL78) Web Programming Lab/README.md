@@ -13,5 +13,5 @@
 **Operating system**:	Ubuntu 16.04 LTS (32/64 bit)
 **Softwares:**
 * A web browser
-* Preferred text editor - [Sublime Text Editor](sublimetext.com)
+* Preferred text editor - [Sublime Text Editor](https://www.sublimetext.com/)
 * 

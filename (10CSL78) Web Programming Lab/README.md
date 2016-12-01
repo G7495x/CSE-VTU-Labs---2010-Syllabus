@@ -10,7 +10,7 @@
 * Ruby on Rails
 
 ### Software Stack:
-**Operating system**:	Ubuntu 16.04 LTS (32/64 bit)
+**Operating system**:	Ubuntu 16.04 LTS (32/64 bit) <br>
 **Softwares:**
 * A web browser
 * Preferred text editor - [Sublime Text Editor](https://www.sublimetext.com/)

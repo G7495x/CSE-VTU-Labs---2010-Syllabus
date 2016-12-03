@@ -1,10 +1,15 @@
 # 4.
 #### a) Design an XML document to store information about a student in an engineering college affiliated to VTU. The information must include USN, Name, Name of the College, Brach, Year of Joining, and e-mail id. Make up sample data for 3 students. Create a CSS style sheet and use it to display the document.
+### Important bits:
+* ```xsl:template match="/tag-path"```: Matches root tag.
+* ```xsl:for-each select="tag"```: For each loop on all specified elements.
+* ```xsl:value-of match="tag"```: Value of an element.
+
 ### Code (XML)
-**File Path**: 4a.xml
+**File path:** ```/opt/lampp/htdocs/web-lab/4a.xml```
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet href="4a.css" type="text/css"?>
+<?xml-stylesheet type="text/css" href="4a.css"?>
 <student>
 	<stud-info>Student Details</stud-info>
 	<stud1>
@@ -25,16 +30,16 @@
 	</stud2>
 	<stud3>
 		USN:<usn>1AB10CD003</usn>
-		Name:<name>Jkl</name>
+		Name:<name>Vbn</name>
 		College:<col>ABC</col>
 		Branch:<branch>CD</branch>
 		Year of joining:<yoj>2010</yoj>
-		E-mail:<email>jkl@xyz.com</email>
+		E-mail:<email>vbn@vbn.com</email>
 	</stud3>
 </student>
 ```
 ### Code (CSS)
-**File Path**: 4a.css
+**File path:** ```/opt/lampp/htdocs/web-lab/4a.css```
 ```css
 stud-info{
 	color:			black;
@@ -72,9 +77,11 @@ stud3 *{
 	color:	green;
 }
 ```
+### Output
+![](a.png)
 #### b) Create an XSLT style sheet for one student element of the above document and use it to create a display of that element.
 ### Code (XML)
-**File Path:** 4b.xml
+**File path:** ```/opt/lampp/htdocs/web-lab/4b.xml```
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="4b.xsl"?>
@@ -90,7 +97,7 @@ stud3 *{
 </student>
 ```
 ### Code (XSL)
-**File Path:** 4b.xsl
+**File path:** ```/opt/lampp/htdocs/web-lab/4b.xsl```
 ```xsl
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -120,3 +127,5 @@ stud3 *{
 	</xsl:template>
 </xsl:stylesheet>
 ```
+### Output
+![](b.png)

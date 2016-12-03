@@ -1,9 +1,14 @@
-#3.
+# 3.
 #### a) Develop and demonstrate, using Javascript script, a XHTML document that contains three short paragraphs of text, stacked on top of each other, with only enough of each showing so that the mouse cursor can be placed over some part of  them. When the cursor is placed over the exposed part of any paragraph, it should rise to the top to become completely visible.
+### Important bits:
+* ```onmouseover="fn(params...)"``` attribute: Specifies a function that is to be called when mouse hovers over an element.
+* ```onmouseout="fn(params...)"``` attribute: Specifies a function that is to be called when mouse leaves an element.
+* ```element.style.zIndex```: Controls the **z-index** of an element.
+
 ### Code (XHTML)
 ```xhtml
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR?xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>3a - Stack Ordering</title>
@@ -49,11 +54,14 @@
 	</body>
 </html>
 ```
-####b) Modify the above document so that when a paragraph is moved from the top stacking position, it returns to its original position rather than to the bottom.
+### Output:
+![](a1.png)
+![](a2.png)
+#### b) Modify the above document so that when a paragraph is moved from the top stacking position, it returns to its original position rather than to the bottom.
 ### Code (XHTML)
 ```xhtml
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR?xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>3b - Stack Ordering and recovering</title>
@@ -99,3 +107,6 @@
 	</body>
 </html>
 ```
+### Output:
+![](b1.png)
+![](b2.png)

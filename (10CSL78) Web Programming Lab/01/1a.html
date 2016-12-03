@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>1a - Fibonacci</title>
+	</head>
+	<body>
+		<h1>Fibonacci Series</h1>
+		<script type="text/javascript">
+			n=prompt("Enter a value for n")
+			if(n>=1){
+				if(n==1)
+					document.write("0<br />")
+				else{
+					a=0;
+					b=1;
+					document.write("0<br />1<br />")
+					for(i=2;i<n;++i){
+						c=a+b;
+						a=b;
+						b=c;
+						document.write(c+"<br />")
+					}
+				}
+			}
+			else
+				alert("Invalid input!!!")
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="4a.css"?>
+<student>
+	<stud-info>Student Details</stud-info>
+	<stud1>
+		USN:<usn>1AB10CD001</usn>
+		Name:<name>Asd</name>
+		College:<col>ABC</col>
+		Branch:<branch>CD</branch>
+		Year of joining:<yoj>2010</yoj>
+		E-mail:<email>asd@vbn.com</email>
+	</stud1>
+	<stud2>
+		USN:<usn>1AB10CD002</usn>
+		Name:<name>Fgh</name>
+		College:<col>ABC</col>
+		Branch:<branch>CD</branch>
+		Year of joining:<yoj>2010</yoj>
+		E-mail:<email>fgh@vbn.com</email>
+	</stud2>
+	<stud3>
+		USN:<usn>1AB10CD003</usn>
+		Name:<name>Vbn</name>
+		College:<col>ABC</col>
+		Branch:<branch>CD</branch>
+		Year of joining:<yoj>2010</yoj>
+		E-mail:<email>vbn@vbn.com</email>
+	</stud3>
+</student>

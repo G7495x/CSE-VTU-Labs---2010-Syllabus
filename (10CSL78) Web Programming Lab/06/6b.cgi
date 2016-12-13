@@ -6,7 +6,7 @@ open(FILE,'<count.txt');	#Open as read-only
 $count=<FILE>;				#Get value in file
 close(FILE);
 
-$count++;
+++$count;
 
 open(FILE,'>count.txt');	#Open as write-only
 print FILE "$count";		#Print value in file

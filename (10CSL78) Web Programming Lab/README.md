@@ -55,23 +55,19 @@
   SET PASSWORD FOR root@localhost = PASSWORD('root123');
   ```
   1. For PHPMyAdmin to work, <br> Run `sudo gedit /opt/lampp/phpmyadmin/config.inc.php`. <br> Search (ctrl+f) for a line that says `$cfg['Servers'][$i]['user'] = 'root';`. <br> Just enter `root123` in the next line. The result should look like this `$cfg['Servers'][$i]['password'] = 'root123';`. <br> To check if its working, goto `localhost/phpmyadmin` through the browser.
-1. Grant permissions for accessing the folders by user and applications.
-  ```
-  sudo chmod 777 /opt/lampp/htdocs
-  sudo chmod 777 /opt/lampp/cgi-bin
-  ```
-1. Create a folder called `web-lab` inside `htdocs` for storing the HTML, CSS, XML, XSL, PHP programs. <br> Create a folder called `web-lab` inside `cgi-bin` for storing the CGI (perl) programs. <br> Run the following commands again.
-  ```
-  sudo chmod 777 /opt/lampp/htdocs/web-lab
-  sudo chmod 777 /opt/lampp/cgi-bin/web-lab
-  ```
-1. Install DBI for perl.
-  ```
-  sudo -s
-  apt install libdbd-mysql-perl
-  perl -MCPAN -e shell
-  install DBI
-  ```
+1. Grant permissions for accessing the folders by user and applications. <br>
+  `sudo -s` <br>
+  `chmod 777 /opt/lampp/htdocs` <br>
+  `chmod 777 /opt/lampp/cgi-bin`
+1. Create a folder called `web-lab` inside `htdocs` for storing the HTML, CSS, XML, XSL, PHP programs. <br> Create a folder called `web-lab` inside `cgi-bin` for storing the CGI (perl) programs. <br> Run the following commands again. <br>
+  `sudo -s` <br>
+  `chmod 777 /opt/lampp/htdocs/web-lab` <br>
+  `chmod 777 /opt/lampp/cgi-bin/web-lab`
+1. Install DBI for perl. <br>
+  `sudo -s` <br>
+  `apt install libdbd-mysql-perl` <br>
+  `perl -MCPAN -e shell` <br>
+  `install DBI` <br>
 Use perl `perl -e 'use DBI;'` to check if its installed. If no error occurs, then installation was successful.
 
 # **Warning!**

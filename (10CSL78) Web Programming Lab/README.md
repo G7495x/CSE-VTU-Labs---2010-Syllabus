@@ -49,29 +49,29 @@
 1. Install XAMPP and add `/opt/lampp/bin` to `$PATH`. <br> Run `sudo gedit ~/.profile` and add a line at the end `PATH="$PATH:/opt/lampp/bin"`. <br> Log-off and Log-on from the OS and check if it has been added by typing `echo $PATH` in the terminal.
 1. Set root password for MySQL. <br> (You can set your own password, but here `root123` is used throughout the programs.)
   1. Run the following commands in shell.
-    ```
-    sudo /opt/lampp/lampp start
-    mysql -u root
-    SET PASSWORD FOR root@localhost = PASSWORD('root123');
-    ```
+  ```
+  sudo /opt/lampp/lampp start
+  mysql -u root
+  SET PASSWORD FOR root@localhost = PASSWORD('root123');
+  ```
   1. For PHPMyAdmin to work, <br> Run `sudo gedit /opt/lampp/phpmyadmin/config.inc.php`. <br> Search (ctrl+f) for a line that says `$cfg['Servers'][$i]['user'] = 'root';`. <br> Just enter `root123` in the next line. The result should look like this `$cfg['Servers'][$i]['password'] = 'root123';`. <br> To check if its working, goto `localhost/phpmyadmin` through the browser.
 1. Grant permissions for accessing the folders by user and applications.
-    ```
-    sudo chmod 777 /opt/lampp/htdocs
-    sudo chmod 777 /opt/lampp/cgi-bin
-    ```
+  ```
+  sudo chmod 777 /opt/lampp/htdocs
+  sudo chmod 777 /opt/lampp/cgi-bin
+  ```
 1. Create a folder called `web-lab` inside `htdocs` for storing the HTML, CSS, XML, XSL, PHP programs. <br> Create a folder called `web-lab` inside `cgi-bin` for storing the CGI (perl) programs. <br> Run the following commands again.
-	```
-	sudo chmod 777 /opt/lampp/htdocs/web-lab
-	sudo chmod 777 /opt/lampp/cgi-bin/web-lab
-	```
+  ```
+  sudo chmod 777 /opt/lampp/htdocs/web-lab
+  sudo chmod 777 /opt/lampp/cgi-bin/web-lab
+  ```
 1. Install DBI for perl.
-	```
-	sudo -s
-	apt install libdbd-mysql-perl
-	perl -MCPAN -e shell
-	install DBI
-	```
+  ```
+  sudo -s
+  apt install libdbd-mysql-perl
+  perl -MCPAN -e shell
+  install DBI
+  ```
 Use perl `perl -e 'use DBI;'` to check if its installed. If no error occurs, then installation was successful.
 
 # **Warning!**

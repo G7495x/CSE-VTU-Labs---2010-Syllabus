@@ -21,7 +21,7 @@
 						<td><xsl:value-of select="email"/></td>
 					</tr>
 				</xsl:for-each>
-		   </table>
-	   </html>
+			</table>
+		</html>
 	</xsl:template>
 </xsl:stylesheet>

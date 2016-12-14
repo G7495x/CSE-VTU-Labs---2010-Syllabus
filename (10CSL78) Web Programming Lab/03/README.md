@@ -6,12 +6,12 @@
 * `onmouseout="fn(params...)"` attribute: Specifies a function that is to be called when mouse leaves an element.
 
 ### File Path
-`/opt/lampp/htdocs/web-lab/3a.html`
+`/var/www/html/web-lab/3a.html`
 ### Output
 ![](a1.png)
 ![](a2.png)
 ### File Path
-`/opt/lampp/htdocs/web-lab/3b.html`
+`/var/www/html/web-lab/3b.html`
 ### Output
 ![](b1.png)
 ![](b2.png)

@@ -3,8 +3,8 @@
 * `localtime(time)`: Returns time.
 
 ### File Paths
-`/opt/lampp/htdocs/web-lab/7.html` <br>
-`/opt/lampp/cgi-bin/web-lab/7.cgi`
+`/var/www/html/web-lab/7.html` <br>
+`/usr/lib/cgi-bin/web-lab/7.cgi`
 ### Output
 ![](1.png)
 ![](2.png)

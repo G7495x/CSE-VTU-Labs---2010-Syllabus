@@ -32,18 +32,20 @@
 * CSS3
 * JavaScript
 * Perl
-* Apache server
-* MySQL Database
+* MySQL
 * PHP
 * Ruby on Rails
 
 ### Software Stack
 * **Operating system used:**	Ubuntu 16.04 LTS (64 bit). <br> [Linux is required only for a few programs that need shell command execution. <br> For others, Windows may be used. The instructions and code are tailored specifically for Linux only. Some changes may be required for a few of them to work in Windows.] <br>
 * **Web browser used:** Mozilla Firefox v50. [It is highly recommended to use Firefox for getting exact output on all programs.]
-* **[XAMPP](https://www.apachefriends.org/index.html)** - Apache server, MySQL Database, PHPMyAdmin
-* **Perl** (Comes pre-installed in Ubuntu)
+* **Apache**
+* **MySQL**
+* **PHP with PHPMyAdmin**
+* **Perl**
+* **Ruby on Rails**
 
-* Preferred text editor - [Sublime Text Editor](https://www.sublimetext.com/) or [Atom Text Editor](https://atom.io/) with plugins.
+* Preferred text editor - **[Sublime Text Editor](https://www.sublimetext.com/)** or **[Atom Text Editor](https://atom.io/)** with plugins.
 
 ### Installation
 1. Install XAMPP and add `/opt/lampp/bin` to `$PATH`. <br> Run `sudo gedit ~/.profile` and add a line at the end `PATH="$PATH:/opt/lampp/bin"`. <br> Log-off and Log-on from the OS and check if it has been added by typing `echo $PATH` in the terminal.
@@ -57,17 +59,18 @@
   1. For PHPMyAdmin to work, <br> Run `sudo gedit /opt/lampp/phpmyadmin/config.inc.php`. <br> Search (ctrl+f) for a line that says `$cfg['Servers'][$i]['user'] = 'root';`. <br> Just enter `root123` in the next line. The result should look like this `$cfg['Servers'][$i]['password'] = 'root123';`. <br> To check if its working, goto `localhost/phpmyadmin` through the browser.
 1. Grant permissions for accessing the folders by user and applications. <br>
   `sudo -s` <br>
-  `chmod 777 /opt/lampp/htdocs` <br>
-  `chmod 777 /opt/lampp/cgi-bin`
+  `chmod 777 /var/www/html` <br>
+  `chmod 777 /usr/lib/cgi-bin`
 1. Create a folder called `web-lab` inside `htdocs` for storing the HTML, CSS, XML, XSL, PHP programs. <br> Create a folder called `web-lab` inside `cgi-bin` for storing the CGI (perl) programs. <br> Run the following commands again. <br>
   `sudo -s` <br>
-  `chmod 777 /opt/lampp/htdocs/web-lab` <br>
-  `chmod 777 /opt/lampp/cgi-bin/web-lab`
+  `chmod 777 /var/www/html/web-lab` <br>
+  `chmod 777 /usr/lib/cgi-bin/web-lab`
 1. Install DBI for perl. <br>
   `sudo -s` <br>
   `apt install libdbd-mysql-perl` <br>
   `perl -MCPAN -e shell` <br>
   `install DBI` <br>
+	`cpan DBD::mysql` <br>
 Use perl `perl -e 'use DBI;'` to check if its installed. If no error occurs, then installation was successful.
 
 # **Warning!**
@@ -75,9 +78,9 @@ Use perl `perl -e 'use DBI;'` to check if its installed. If no error occurs, the
 * Every program written in cgi-bin **MUST** have permissions set to **777**. Otherwise, they don't work. <br> Just perform `sudo chmod 777 *` after saving **EVERY** program in the `cgi-bin` folder.
 
 ### Info
-`/opt/lampp/htdocs/` - This is the folder for all the HTML,XML, XSL, CSS, PHP files. By default, `localhost/` in your web browser will direct to the contents in this folder. You can create folders inside it to organize your files, but their respective paths must be reflected while accessing through the browser.
+`/var/www/html/` - This is the folder for all the HTML,XML, XSL, CSS, PHP files. By default, `localhost/` in your web browser will direct to the contents in this folder. You can create folders inside it to organize your files, but their respective paths must be reflected while accessing through the browser.
 
-`/opt/lampp/cgi-bin/` - This is the CGI folder. You can create folders inside it to organize your files, but their respective paths must be reflected inside the codes as well. <br>
+`/usr/lib/cgi-bin/` - This is the CGI folder. You can create folders inside it to organize your files, but their respective paths must be reflected inside the codes as well. <br>
 
 **For starting Apache server:** `sudo /opt/lampp/lampp start` <br>
 **For stopping Apache server:** `sudo /opt/lampp/lampp stop` <br>

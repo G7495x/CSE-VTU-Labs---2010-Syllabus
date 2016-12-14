@@ -7,14 +7,14 @@
 * `system(command)`: Executes a shell command.
 
 ### File Paths
-`/opt/lampp/htdocs/web-lab/5a.html` <br>
-`/opt/lampp/cgi-bin/web-lab/5a.cgi`
+`/var/www/html/web-lab/5a.html` <br>
+`/usr/lib/cgi-bin/web-lab/5a.cgi`
 ### Output
 ![](a1.png)
 ![](a2.png)
 ### File Paths
-`/opt/lampp/htdocs/web-lab/5b.html` <br>
-`/opt/lampp/cgi-bin/web-lab/5b.cgi`
+`/var/www/html/web-lab/5b.html` <br>
+`/usr/lib/cgi-bin/web-lab/5b.cgi`
 ### Output
 ![](b1.png)
 ![](b2.png)

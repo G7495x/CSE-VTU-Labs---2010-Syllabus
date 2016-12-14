@@ -5,8 +5,8 @@
 * `setcookie(name,value,expiry)`: Creates a cookie.
 
 ### File Paths
-`/opt/lampp/htdocs/web-lab/9.html` <br>
-`/opt/lampp/htdocs/web-lab/9.php`
+`/var/www/html/web-lab/9.html` <br>
+`/var/www/html/web-lab/9.php`
 ### Output
 ![](1.png)
 ![](2.png)

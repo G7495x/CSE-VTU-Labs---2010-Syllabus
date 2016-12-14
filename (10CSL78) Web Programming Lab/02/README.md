@@ -7,14 +7,14 @@
 * `String.match('pattern')`: Checks if a string matches a specified pattern.
 
 ### File Path
-`/opt/lampp/htdocs/web-lab/2a.html`
+`/var/www/html/web-lab/2a.html`
 ### Output
 ![](a1.png)
 ![](a2.png)
 ![](a3.png)
 ![](a4.png)
 ### File Path
-`/opt/lampp/htdocs/web-lab/2b.html`
+`/var/www/html/web-lab/2b.html`
 ### Output
 ![](b1.png)
 ![](b2.png)

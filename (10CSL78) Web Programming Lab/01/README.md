@@ -7,12 +7,12 @@
 * `document.write(content)`:  Appends content inside body.
 
 ### File Path
-`/opt/lampp/htdocs/web-lab/1a.html`
+`/var/www/html/web-lab/1a.html`
 ### Output
 ![](a1.png)
 ![](a2.png)
 ### File Path
-`/opt/lampp/htdocs/web-lab/1b.html`
+`/var/www/html/web-lab/1b.html`
 ### Output
 ![](b1.png)
 ![](b2.png)

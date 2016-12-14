@@ -4,8 +4,8 @@
 * `_SESSION[]`: Hash map that holds all the session variables and their values.
 
 ### File Paths
-`/opt/lampp/htdocs/web-lab/10.html` <br>
-`/opt/lampp/htdocs/web-lab/10.php`
+`/var/www/html/web-lab/10.html` <br>
+`/var/www/html/web-lab/10.php`
 ### Output
 ![](1.png)
 ![](2.png)

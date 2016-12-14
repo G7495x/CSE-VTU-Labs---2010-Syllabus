@@ -7,12 +7,12 @@
 * `xsl:value-of match="tag"`: Value of an element.
 
 ### File Paths
-`/opt/lampp/htdocs/web-lab/4a.xml` <br>
-`/opt/lampp/htdocs/web-lab/4a.css`
+`/var/www/html/web-lab/4a.xml` <br>
+`/var/www/html/web-lab/4a.css`
 ### Output
 ![](a.png)
 ### File Paths
-`/opt/lampp/htdocs/web-lab/4b.xml` <br>
-`/opt/lampp/htdocs/web-lab/4b.xsl`
+`/var/www/html/web-lab/4b.xml` <br>
+`/var/www/html/web-lab/4b.xsl`
 ### Output
 ![](b.png)

@@ -4,5 +4,5 @@
 	else
 		echo 'Last date : '.$_COOKIE['lastVisit'];
 	$inTwoMonths=24*60*60*60+time();
-	setcookie('lastVisit',date('G:i - m/d/y'),$inTwoMonths);	#cookie name,cookie value,(Optional)cookie expiry time
+	setcookie('lastVisit',date('G:i - d/m/y'),$inTwoMonths);	#cookie name,cookie value,(Optional)cookie expiry time
 ?>

@@ -1,0 +1,21 @@
+<center>
+	<h1>Searched Book Information</h1>
+	<table border="1">
+		<caption>Book Information</caption>
+		<% @t=Book.find_by_title(params[:bs_title]) %>
+		<tr>
+			<th>Accession Number</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Edition</th>
+			<th>Publisher</th>
+		</tr>
+		<tr align="center">
+			<td><%= @t.access_no %></td>
+			<td><%= @t.title %></td>
+			<td><%= @t.author %></td>
+			<td><%= @t.edition %></td>
+			<td><%= @t.publisher %></td>
+		</tr>
+	</table>
+</center>

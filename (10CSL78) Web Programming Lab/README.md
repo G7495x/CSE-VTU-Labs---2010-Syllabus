@@ -25,7 +25,7 @@
 1. Write a PHP program to store current date-time in a COOKIE and display the 'Last visited on' date-time on the web page upon reopening of the same page.
 1. Write a PHP program to store page views count in SESSION, to increment the count on each refresh, and to show the count on web page.
 1. Create a XHTML form with Name, Address Line 1, Address Line 2, and E-mail text fields. On submitting, store the values in MySQL table. Retrieve and display the data based on Name.
-1. Build a Rails application to accept book information viz. Accession number, title, authors, edition and publisher from a web page and store the information in a database and to search for a book with the title specified by the user and to display the search results with proper headings.
+1. Build a Rails application to accept book information viz. Access number, Title, Authors, Edition and Publisher from a web page and store the information in a database and to search for a book with the title specified by the user and to display the search results with proper headings.
 
 ### Technologies
 * XHTML

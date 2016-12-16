@@ -45,7 +45,7 @@ echo -e "${b}
 Step 6: Install DB Interface and MySQL DB Driver for Perl
 ${n}"
 apt -y install libdbd-mysql-perl
-cpan DBI DBD::mysql	#Perl Database Interface and MySQL Database Driver
+cpan DBI DBD::mysql
 
 echo -e "${b}
 Step 7: Restart Apache
@@ -54,7 +54,7 @@ systemctl restart apache2
 
 #Ruby on Rails installation
 echo -e "${b}
-Installing Ruby on Rails
+Install Ruby on Rails...
 ${n}"
 apt -y install libmysqld-dev nodejs
 gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -65,7 +65,7 @@ then
 	echo -e "${b}\nRVM already added to ~/.profile${n}\n"
 else
 	echo -e '\nsource /usr/local/rvm/scripts/rvm'>>~/.profile
-	echo -e "${b}\nLog-off and Log-on for RVM to work on other terminals also.${n}\n"
+	echo -e "${b}\nLog-off and Log-on for Ruby on Rails to work on other terminals also.${n}\n"
 	source /usr/local/rvm/scripts/rvm
 fi
 

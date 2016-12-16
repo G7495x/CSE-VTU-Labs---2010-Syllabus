@@ -38,9 +38,9 @@
 * Preferred text editor - **[Sublime Text Editor](https://www.sublimetext.com/)** or **[Atom Text Editor](https://atom.io/)** with plugins.
 
 ### Installation
-Just run `bash` [install.sh](install.sh) in the terminal and watch out for any errors.
+Just run `bash` [install.sh](install.sh) in the terminal on **Ubuntu** and watch out for any errors.
 
-**Note**
+**Note:**
 * You will be prompted to configure/enter password during installation.
 * During PHPMyAdmin installation, the configuration must look like this! <br> ![](PHPMyAdmin-Config.png) <br> [SPACE] to tick/untick <br> [TAB] to switch between sections <br> [RETURN] to commit
 

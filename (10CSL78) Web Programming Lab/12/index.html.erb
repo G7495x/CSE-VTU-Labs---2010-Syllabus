@@ -8,12 +8,12 @@
 	<div id="addbox">
 		<h3>Add a book</h3>
 		<%= form_tag "/books/add",:method=>"post" do %>
-			<%= text_field_tag :b_access_no,	nil,	placeholder:'Access No.' %><br>
-			<%= text_field_tag :b_title,		nil,	placeholder:'Title' %><br>
-			<%= text_field_tag :b_author,		nil,	placeholder:'Author' %><br>
-			<%= text_field_tag :b_edition,		nil,	placeholder:'Edition' %><br>
-			<%= text_field_tag :b_publisher,	nil,	placeholder:'Publisher' %><br>
-			<br><%= submit_tag("Add Book") %>
+			<%= text_field_tag :b_access_no,	nil,	placeholder:'Access No.' %>	<br>
+			<%= text_field_tag :b_title,		nil,	placeholder:'Title' %>		<br>
+			<%= text_field_tag :b_author,		nil,	placeholder:'Author' %>		<br>
+			<%= text_field_tag :b_edition,		nil,	placeholder:'Edition' %>	<br>
+			<%= text_field_tag :b_publisher,	nil,	placeholder:'Publisher' %>	<br>
+			<br><%= submit_tag "Add Book" %>
 		<% end %>
 	</div>
 </div>
@@ -21,10 +21,10 @@
 <div id="container">
 	<div id="searchbox">
 		<h3>Search Book from Database</h3>
-		<%= form_tag("/books/search") do %>
+		<%= form_tag "/books/search" do %>
 			Enter the Title:
 			<%= text_field_tag :bs_title %>
-			<%= submit_tag("Search") %>
+			<%= submit_tag "Search" %>
 		<% end %>
 	</div>
 </div>

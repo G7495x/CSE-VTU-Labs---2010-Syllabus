@@ -54,7 +54,7 @@ $ns attach-agent $n2 $sink
 #Connect source and destination Agents
 $ns connect $tcp $sink
 
-#Set the timestamps at which events, procedure calls, etc. occur
+#Schedule events, procedure calls, etc.
 $ns at 0 "$ftp start"
 $ns at 10 "finish"
 

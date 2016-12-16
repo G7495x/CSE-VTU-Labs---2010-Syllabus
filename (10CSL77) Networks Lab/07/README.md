@@ -31,7 +31,7 @@ For example,
 <br> CRC = 110
 <br> Transmitted data = 1001110 (Transmitted Codeword)
 <br> Received data: 1100010 (Received Codeword)
-<br><br> In this example, it can be assumed that the number 0101100 is XOR'd with the original data to get the erroneous data. This number is called the error vector. If the error vector is divisible by the divisor, CRC algorithm fails. Hence choice of divisor must be done carefully and must account for most of the common error patterns.
+<br><br> In this example, it can be assumed that the number 0101100 is XOR'd with the original data to get the erroneous data. This number is called the error vector. If the error vector is divisible by the divisor, CRC algorithm fails (like in this example). Hence choice of divisor must be done carefully and must account for most of the common error patterns.
 
 ### Code Output
 ```

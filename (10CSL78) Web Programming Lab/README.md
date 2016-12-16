@@ -27,51 +27,22 @@
 1. Create a XHTML form with Name, Address Line 1, Address Line 2, and E-mail text fields. On submitting, store the values in MySQL table. Retrieve and display the data based on Name.
 1. Build a Rails application to accept book information viz. Access number, Title, Authors, Edition and Publisher from a web page and store the information in a database and to search for a book with the title specified by the user and to display the search results with proper headings.
 
-### Technologies
-* XHTML
-* CSS3
-* JavaScript
-* Perl
-* MySQL
-* PHP
-* Ruby on Rails
-
 ### Software Stack
-* **Operating system used:**	Ubuntu 16.04 LTS (64 bit). <br> [Linux is required only for a few programs that need shell command execution. <br> For others, Windows may be used. The instructions and code are tailored specifically for Linux only. Some changes may be required for a few of them to work in Windows.] <br>
-* **Web browser used:** Mozilla Firefox v50. [It is highly recommended to use Firefox for getting exact output on all programs.]
-* **Apache**
-* **MySQL**
+* **Operating system used:** Ubuntu 16.04 LTS (64 bit). <br> [Linux is required only for a few programs that need shell command execution. For others, Windows may be used. <br> The instructions and code are tailored specifically for Linux only. Some changes may be required for a few of them to work in Windows.] <br>
+* **Web browser used:** Mozilla Firefox v50. <br> [It is highly recommended to use Firefox for getting exact output on all programs.]
+* **Apache** server
+* **MySQL** database
 * **PHP with PHPMyAdmin**
 * **Perl**
-* **Ruby on Rails**
-
+* **Ruby on Rails** <br><br>
 * Preferred text editor - **[Sublime Text Editor](https://www.sublimetext.com/)** or **[Atom Text Editor](https://atom.io/)** with plugins.
 
 ### Installation
-1. Install XAMPP and add `/opt/lampp/bin` to `$PATH`. <br> Run `sudo gedit ~/.profile` and add a line at the end `PATH="$PATH:/opt/lampp/bin"`. <br> Log-off and Log-on from the OS and check if it has been added by typing `echo $PATH` in the terminal.
-1. Set root password for MySQL. <br> (You can set your own password, but here `root123` is used throughout the programs.)
-  1. Run the following commands in shell.
-  ```
-  sudo /opt/lampp/lampp start
-  mysql -u root
-  SET PASSWORD FOR root@localhost = PASSWORD('root123');
-  ```
-  1. For PHPMyAdmin to work, <br> Run `sudo gedit /opt/lampp/phpmyadmin/config.inc.php`. <br> Search (ctrl+f) for a line that says `$cfg['Servers'][$i]['user'] = 'root';`. <br> Just enter `root123` in the next line. The result should look like this `$cfg['Servers'][$i]['password'] = 'root123';`. <br> To check if its working, goto `localhost/phpmyadmin` through the browser.
-1. Grant permissions for accessing the folders by user and applications. <br>
-  `sudo -s` <br>
-  `chmod 777 /var/www/html` <br>
-  `chmod 777 /usr/lib/cgi-bin`
-1. Create a folder called `web-lab` inside `htdocs` for storing the HTML, CSS, XML, XSL, PHP programs. <br> Create a folder called `web-lab` inside `cgi-bin` for storing the CGI (perl) programs. <br> Run the following commands again. <br>
-  `sudo -s` <br>
-  `chmod 777 /var/www/html/web-lab` <br>
-  `chmod 777 /usr/lib/cgi-bin/web-lab`
-1. Install DBI for perl. <br>
-  `sudo -s` <br>
-  `apt install libdbd-mysql-perl` <br>
-  `perl -MCPAN -e shell` <br>
-  `install DBI` <br>
-	`cpan DBD::mysql` <br>
-Use perl `perl -e 'use DBI;'` to check if its installed. If no error occurs, then installation was successful.
+Just run `bash` [install.sh](install.sh) in the terminal and watch out for any errors.
+
+**Note**
+* You will be prompted to configure/enter password during installation.
+* During PHPMyAdmin installation, the configuration must look like this! <br> ![](PHPMyAdmin-Config.png) <br> [SPACE] to tick/untick <br> [TAB] to switch between sections <br> [RETURN] to commit
 
 # **Warning!**
 * Some code, typed in Windows doesn't work in Linux. This is due to **Line Endings**. Make sure all code has proper Linux line endings (LF). <br>
@@ -82,6 +53,4 @@ Use perl `perl -e 'use DBI;'` to check if its installed. If no error occurs, the
 
 `/usr/lib/cgi-bin/` - This is the CGI folder. You can create folders inside it to organize your files, but their respective paths must be reflected inside the codes as well. <br>
 
-**For starting Apache server:** `sudo /opt/lampp/lampp start` <br>
-**For stopping Apache server:** `sudo /opt/lampp/lampp stop` <br>
-(Type `localhost` in the browser to see if its running.)
+Type `localhost` in the browser to see if its running.

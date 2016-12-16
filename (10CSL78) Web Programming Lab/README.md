@@ -28,7 +28,7 @@
 1. Build a Rails application to accept book information viz. Access number, Title, Authors, Edition and Publisher from a web page and store the information in a database and to search for a book with the title specified by the user and to display the search results with proper headings.
 
 ### Software Stack
-* **Operating system used:** Ubuntu 16.04 LTS (64 bit). <br> [Linux is required only for a few programs that need shell command execution. For others, Windows may be used. <br> The instructions and code are tailored specifically for Linux only. Some changes may be required for a few of them to work in Windows.] <br>
+* **Operating system used:** Ubuntu 16.04 LTS (64 bit). <br> [Linux is required only for a few programs that need shell command execution. For others, Windows may be used. <br> The instructions and code are tailored specifically for Linux only. Some changes are required for a few of them to work in Windows.] <br>
 * **Web browser used:** Mozilla Firefox v50. <br> [It is highly recommended to use Firefox for getting exact output on all programs.]
 * **Apache** server
 * **MySQL** database
@@ -45,12 +45,12 @@ Just run `bash` [install.sh](install.sh) in the terminal and watch out for any e
 * During PHPMyAdmin installation, the configuration must look like this! <br> ![](PHPMyAdmin-Config.png) <br> [SPACE] to tick/untick <br> [TAB] to switch between sections <br> [RETURN] to commit
 
 # **Warning!**
-* Some code, typed in Windows doesn't work in Linux. This is due to **Line Endings**. Make sure all code has proper Linux line endings (LF). <br>
-* Every program written in cgi-bin **MUST** have permissions set to **777**. Otherwise, they don't work. <br> Just perform `sudo chmod 777 *` after saving **EVERY** program in the `cgi-bin` folder.
+* Some code typed in Windows doesn't work in Linux. This is due to **Line Endings**. Make sure all code has proper Linux line endings (LF only). <br>
+* Every program written in cgi-bin **MUST** have permissions set to **777**. Otherwise, they won't work. <br> Just perform `sudo chmod 777 *` after saving **EVERY** program in the `cgi-bin` folder.
 
 ### Info
-`/var/www/html/` - This is the folder for all the HTML,XML, XSL, CSS, PHP files. By default, `localhost/` in your web browser will direct to the contents in this folder. You can create folders inside it to organize your files, but their respective paths must be reflected while accessing through the browser.
+`/var/www/html/` - This is the folder for all the HTML,XML, XSL, CSS, PHP files. By default, `localhost/` in your web browser will direct to the contents in this folder. <br> You can create folders inside it to organize your files, but their respective paths must be reflected while accessing through the browser.
 
-`/usr/lib/cgi-bin/` - This is the CGI folder. You can create folders inside it to organize your files, but their respective paths must be reflected inside the codes as well. <br>
+`/usr/lib/cgi-bin/` - This is the CGI folder. <br> You can create folders inside it to organize your files, but their respective paths must be reflected inside the codes as well. <br>
 
 Type `localhost` in the browser to see if its running.

@@ -49,7 +49,7 @@ Just run `bash` [install.sh](install.sh) in the terminal on **Ubuntu** and watch
 * Every program written in cgi-bin **MUST** have permissions set to **777**. Otherwise, they won't work. <br> Just perform `sudo chmod 777 *` after saving **EVERY** program in the `cgi-bin` folder.
 
 ### Info
-`/var/www/html/` - This is the folder for all the HTML,XML, XSL, CSS, PHP files. By default, `localhost/` in your web browser will direct to the contents in this folder. <br> You can create folders inside it to organize your files, but their respective paths must be reflected while accessing through the browser.
+`/var/www/html/` - This is the folder for all the HTML, XML, XSL, CSS, PHP files. By default, `localhost/` in your web browser will direct to the contents in this folder. <br> You can create folders inside it to organize your files, but their respective paths must be reflected while accessing through the browser.
 
 `/usr/lib/cgi-bin/` - This is the CGI folder. <br> You can create folders inside it to organize your files, but their respective paths must be reflected inside the codes as well. <br>
 

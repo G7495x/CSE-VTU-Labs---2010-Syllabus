@@ -2,7 +2,7 @@
 
 ### Intro
 * Distance vector routing protocol is a routing algorithm used in packet-switched networks.
-* It is based on Bellman-Ford's algorithm.
+* It is based on **Bellman-Ford's shortest path algorithm**.
 * In a network, shortest path is calculated using this algorithm.
 * Each node/router holds a table called routing table, which has 3 fields: **Destination, Next Hop, Distance.**
 * Each router calculates the shortest path to all destinations requested by incoming packets through this algorithm and maintains this table.

@@ -3,7 +3,7 @@
 ### Intro
 * Cyclic Redundancy Check or **CRC**, is an error detection algorithm (**NOT** an error correction algorithm!) for checking bit-parity errors that may occur during network transmission.
 * Given binary data bits, CRC algorithm produces a **CRC bit-sequence** of specified length (For 16-bit CRC, it's 16 bits) using which bit-parity errors can be detected.
-* **Higher** the length of the CRC, the **better** it is at identifying errors, but **longer** it takes to check and detect.
+* **Higher** the length of the CRC, the **better** it is at identifying errors, but **longer** are the checking and detecting functions.
 * CRC can only tolerate a certain number of bit-parity errors, beyond which errors go undetected.
 * Polynomials are used to represent binary bits. This makes visualizing the operations easier.<br>
   Eg:	**1101** will be **1**x<sup>3</sup>+**1**x<sup>2</sup>+**0**x<sup>1</sup>+**1**x<sup>0</sup> = x<sup>3</sup>+x<sup>2</sup>+1<br><br>

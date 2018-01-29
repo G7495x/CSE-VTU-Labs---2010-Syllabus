@@ -42,9 +42,9 @@ Just run `bash` [install.sh](install.sh) in the terminal on **Ubuntu** and watch
 
 **Note:**
 * You will be prompted to configure/enter password during installation.
-* During PHPMyAdmin installation, the configuration must look like this! <br> ![](PHPMyAdmin-Config.png) <br> [SPACE] to tick/untick <br> [TAB] to switch between sections <br> [RETURN] to commit
+* During PHPMyAdmin installation, the configuration must look like this <br> ![](PHPMyAdmin-Config.png) <br> [SPACE] to tick/untick <br> [TAB] to switch between sections <br> [RETURN] to commit
 
-# **Warning!**
+# **Warning**
 * Some code typed in Windows doesn't work in Linux. This is due to **Line Endings**. Make sure all code has proper Linux line endings (LF only). <br>
 * Every program written in cgi-bin **MUST** have permissions set to **777**. Otherwise, they won't work. <br> Just perform `sudo chmod 777 *` after saving **EVERY** program in the `cgi-bin` folder.
 

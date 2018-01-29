@@ -17,7 +17,7 @@
 * The **remainder** is the CRC bits. <br> The **quotient** is useless and is discarded.
 * The **divisor** is normally called the generator polynomial or simply the generator. <br> The divisor is 1 bit longer than the required size of CRC with MSB = 1. <br> A pre-defined divisor is used and is common between sender and receiver.
 * For 16-bit CRC, the divisor must be 16+1=17 bits long with leftmost bit = 1.
-* CRC is computed by sender and is **appended** to the data bits and sent. <br> The receiver just performs a division operation on the entire received bits. After the division, the appended CRC bits should be **zeros**. If not, then an error is detected.
+* CRC is computed by sender and is **appended** to the data bits and sent. <br> The receiver just performs a division operation on the entire received bits. After the division, the appended CRC bits should be **zeros**. If not, then an error is implied.
 * **CRC-CCITT** (16-bit) standard divisor - 0b10001000000100001. (x<sup>16</sup>+x<sup>12</sup>+x<sup>5</sup>+1)
 
 ### Mechanism
